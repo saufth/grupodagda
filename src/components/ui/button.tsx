@@ -8,20 +8,20 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-accent/95 text-accent-foreground hover:bg-accent',
+        default: 'bg-gradient-to-tr from-accent via-accent/95 to-accent/80 backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-accent-foreground hover:bg-accent',
         destructive: 'bg-destructive/95 text-destructive-foreground hover:bg-destructive',
         outline: 'border border-primary text-primary hover:bg-muted text-primary hover:text-primary-foreground',
-        secondary: 'bg-secondary text-secondary-foreground hover:bg-accent hover:text-accent-foreground',
-        ghost: 'bg-secondary/80 hover:bg-secondary/90 backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-secondary-foreground border',
+        secondary: 'bg-gradient-to-tr from-primary via-primary to-primary/80 backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-primary-foreground hover:bg-primary',
+        ghost: 'bg-gradient-to-tr from-secondary/90 via-secondary/80 to-secondary/60 hover:bg-secondary backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-secondary-foreground border',
         link: 'hover:underline'
       },
       size: {
-        default: 'h-8 lg:h-9 px-4 text-sm lg:text-base',
-        xs: 'text-xs lg:text-sm',
-        sm: 'px-1 text-sm lg:text-base',
-        lg: 'w-fit h-11 lg:h-12 px-2 lg:px-3 lg:text-lg',
-        full: 'w-full md:w-fit h-11 lg:h-12 px-4 lg:px-6 lg:text-lg',
-        icon: 'h-7 lg:h-[33px] w-7 lg:w-[33px]'
+        default: 'h-8 xl:h-9 px-4 text-sm xl:text-base',
+        xs: 'text-xs xl:text-sm',
+        sm: 'px-1 text-sm xl:text-base',
+        lg: 'w-fit h-12 xl:h-[50px] px-4 xl:px-6 xl:text-lg font-medium',
+        full: 'w-full md:w-fit h-12 xl:h-[50px] px-4 xl:px-6 xl:text-lg font-medium',
+        icon: 'h-7 xl:h-[33px] w-7 xl:w-[33px]'
       }
     },
     defaultVariants: {

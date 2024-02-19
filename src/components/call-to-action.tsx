@@ -11,14 +11,14 @@ const CallToAction = React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'href' 
     return (
       <Link
         href={contactLink.href}
-        className={cn('flex items-center gap-x-1', className)}
+        className={cn('flex items-center gap-x-2 border text-black', className)}
         size={size}
         variant={variant}
         ref={ref}
         {...props}
       >
         {contactLink.title}
-        <Icons.ArrowUpRight className='btn-icon w-4 h-4 fill-accent-foreground' />
+        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-black' />
       </Link>
     )
   }
@@ -32,14 +32,14 @@ const CallToAbout = React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'href' |
     return (
       <Link
         href={aboutLink.href}
-        className={cn('flex items-center gap-x-1', className)}
+        className={cn('flex items-center gap-x-2', className)}
         size={size}
         variant={variant}
         ref={ref}
         {...props}
       >
         {aboutLink.title}
-        <Icons.ArrowUpRight className='btn-icon w-4 h-4 fill-secondary-foreground' />
+        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-secondary-foreground' />
       </Link>
     )
   }
@@ -53,14 +53,14 @@ const CallToServices = React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'href
     return (
       <Link
         href={servicesLink.href}
-        className={cn('flex items-center gap-x-1', className)}
+        className={cn('flex items-center gap-x-2', className)}
         size={size}
         variant={variant}
         ref={ref}
         {...props}
       >
         {servicesLink.title}
-        <Icons.ArrowUpRight className='btn-icon w-4 h-4 fill-secondary-foreground' />
+        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-secondary-foreground' />
       </Link>
     )
   }
@@ -74,14 +74,14 @@ const CallToPurpose = React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'href'
     return (
       <Link
         href={purposeLink.href}
-        className={cn('flex items-center gap-x-1', className)}
+        className={cn('flex items-center gap-x-2', className)}
         size={size}
         variant={variant}
         ref={ref}
         {...props}
       >
         {purposeLink.title}
-        <Icons.ArrowUpRight className='btn-icon w-4 h-4 fill-secondary-foreground' />
+        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-secondary-foreground' />
       </Link>
     )
   }

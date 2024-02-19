@@ -31,7 +31,7 @@ export const contactEmail = `contacto@${domain}`
 
 export const siteConfig: SiteConfig = {
   name: 'Grupo DAGDA',
-  description: 'Lorem ipsun dolor sit amet consectetur',
+  description: 'Lorem ipsun dolor sitamet ',
   slogan: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
   url: `https://${domain}`,
   author,

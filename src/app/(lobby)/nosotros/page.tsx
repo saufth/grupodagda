@@ -6,7 +6,7 @@ import { values, history } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(String(process.env.NEXT_PUBLIC_APP_URL)),
+  metadataBase: new URL(siteConfig.url),
   title: 'Nosotros',
   description: siteConfig.description
 }
@@ -15,7 +15,7 @@ export default function AboutPage () {
   return (
     <>
       <section className='-mt-[60px] lg:-mt-20'>
-        <div className='full-bleed-container h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1000px] relative z-10 flex flex-col justify-center bg-primary border-b 2xl:border-b-0'>
+        <div className='full-bleed-container h-[100dvh] min-h-[500xp] lg:min-h-[600px] relative z-10 flex flex-col justify-center bg-primary border-b 2xl:border-b-0'>
           <div className='relative z-10'>
             <div className='max-w-xs md:max-w-4xl mx-auto text-center px-gutter'>
               <h1 className='f-display-1 font-header text-balance max-w-[322px] xs:max-w-none text-gradient'>

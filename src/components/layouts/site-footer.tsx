@@ -1,55 +1,48 @@
-import NextLink from 'next/link'
-import { CallToAction } from '@/components/call-to-action'
-import { Icons } from '@/components/icons'
 import { Link } from '@/components/ui/link'
-import { contactEmail, siteConfig, siteNav } from '@/config/site'
+import { contactEmail, siteConfig } from '@/config/site'
 
 export default function SiteFooter () {
   return (
-    <footer className='border-t pt-spacing-4 pb-spacing-7 bg-muted'>
-      <div className='container-sm sm:flex sm:justify-between'>
-        <div className='sm:mt-0 flex flex-col justify-between'>
-          <div className='flex gap-x-2'>
-            <NextLink href='/'>
-              <Icons.Logoname className='w-full h-9 [&_*]:fill-white' />
-              <span className='sr-only'>{siteConfig.name} home</span>
-            </NextLink>
-            <span className='text-lg text-white leading-none sm:leading-none mt-2.5'>
-              {`© ${new Date().getFullYear()}`}
-            </span>
-          </div>
-          <div className='hidden sm:block mt-spacing-5'>
-            <div className='text-sm sm:text-base text-muted-foreground'>
-              Correo electrónico
-            </div>
-            <Link className='text-lg lg:text-xl underline px-0 text-white' href={`mailto:${contactEmail}`}>
-              {contactEmail}
-            </Link>
-          </div>
+    <footer className='border-t pt-spacing-7 pb-spacing-7 bg-gradient-to-tr from-muted via-muted to-muted/95'>
+      <div className='container flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between'>
+        <div>
+          <span className='text-white font-header text-sm'>
+            {`${siteConfig.name} © ${new Date().getFullYear()}`}
+          </span>
         </div>
-        <nav className='flex flex-col gap-y-6 mt-4 sm:mt-0'>
-          <ul className='flex flex-col gap-y-3 sm:gap-y-4'>
-            {siteNav.map((navItem, key) => (
+        <div>
+          <div className='text-base sm:text-lg font-medium text-muted-foreground'>
+            Directorio
+          </div>
+          <ul className='space-y-spacing-2 mt-spacing-3'>
+            {siteConfig.mainNav.map((navItem, key) => (
               <li key={key}>
-                {key < siteNav.length - 1
-                  ? (
-                    <Link href={navItem.href} className='flex items-center gap-x-1 font-medium text-secondary-foreground' variant='link'>
-                      {navItem.title}
-                      <Icons.ArrowUpRight className='btn-icon w-4 h-4 fill-accent-foreground' />
-                    </Link>
-                    )
-                  : (
-                    <CallToAction className='[&>.btn-icon]:fill-secondary-foreground' variant='ghost' size='default' />
-                    )}
+                <Link href={navItem.href} className='text-base xl:text-lg font-light text-white'>
+                  {navItem.title}
+                </Link>
               </li>
             ))}
           </ul>
-        </nav>
-        <div className='mt-spacing-6 block sm:hidden'>
-          <div className='text-sm sm:text-base text-muted-foreground'>
+        </div>
+        <div>
+          <div className='text-base font-medium sm:text-lg text-muted-foreground'>
+            Soluciones
+          </div>
+          <ul className='space-y-spacing-2 mt-spacing-3'>
+            {siteConfig.mainNav.map((navItem, key) => (
+              <li key={key}>
+                <Link href={navItem.href} className='text-base xl:text-lg font-light text-white'>
+                  {navItem.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
+        <div>
+          <div className='text-base sm:text-lg font-medium text-muted-foreground'>
             Correo electrónico
           </div>
-          <Link className='text-lg lg:text-xl underline px-0 text-white' href={`mailto:${contactEmail}`}>
+          <Link className='text-base xl:text-lg font-light text-white' href={`mailto:${contactEmail}`}>
             {contactEmail}
           </Link>
         </div>

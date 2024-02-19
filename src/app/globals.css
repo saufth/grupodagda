@@ -14,9 +14,9 @@
     --popover: 25.37% 0 0; /* #222222 */
     --popover-foreground: 98.48% 0 0; /* #FAFAFA */
     --primary: 30.22% 0.025 90.71; /* #332E20 */
-    --primary-foreground: 93.11% 0.015 90.24; /* #ECE8DD */
+    --primary-foreground: 100% 0 0; /* #FFFFFF */
     --secondary: 56.04% 0.036 82.63; /* #7F735D */
-    --secondary-foreground: 93.11% 0.015 90.24; /* #ECE8DD */
+    --secondary-foreground: 100% 0 0; /* #FFFFFF */
     --muted: 27.41% 0.005 286.03; /* #27272A */
     --muted-foreground: 71.19% 0.013 286.07; /* #A1A1AA */
     --accent: 69.96% 0.081 67.77; /* #C09567 */
@@ -101,9 +101,9 @@
     --popover: 25.37% 0 0; /* #222222 */
     --popover-foreground: 98.48% 0 0; /* #FAFAFA */
     --primary: 30.22% 0.025 90.71; /* #332E20 */
-    --primary-foreground: 93.11% 0.015 90.24; /* #ECE8DD */
+    --primary-foreground: 100% 0 0; /* #FFFFFF */
     --secondary: 56.04% 0.036 82.63; /* #7F735D */
-    --secondary-foreground: 93.11% 0.015 90.24; /* #ECE8DD */
+    --secondary-foreground: 100% 0 0; /* #FFFFFF */
     --muted: 0.22% 0.025 90.71; /* #332E20 */
     --muted-foreground: 71.19% 0.013 286.07; /* #A1A1AA */
     --accent: 69.96% 0.081 67.77; /* #C09567 */
@@ -195,7 +195,7 @@
   }
 
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-t from-[#c1c1c4] to-white;
+    @apply text-transparent bg-clip-text bg-gradient-to-t from-foreground to-foreground/90;
   }
 
   /* Container */
