@@ -194,8 +194,8 @@
     @apply text-[1rem] xl:text-[1.125rem] tracking-normal leading-[130%];
   }
 
-  .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-t from-secondary-foreground to-secondary-foreground/90;
+  .text-gradient-secondary {
+    @apply text-transparent bg-clip-text bg-gradient-to-t from-secondary-foreground/95 to-secondary-foreground/80;
   }
 
   /* Container */
