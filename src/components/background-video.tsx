@@ -27,7 +27,7 @@ export default function BackgroundVideo ({ src }: BackgroundVideoProps) {
       >
         <source src={src} type='video/mp4' />
       </video>
-      <div className='absolute inset-0 bg-black/30 backdrop-filter md:backdrop-filter-none backdrop-blur-2xl md:bg-transparent md:bg-gradient-to-r md:from-accent/10 md:via-accent/10 md:to-black/10 z-10' />
+      <div className='absolute inset-0 bg-black/30 md:bg-transparent md:bg-gradient-to-r md:from-accent/10 md:via-accent/10 md:to-black/10 z-10' />
     </div>
   )
 }
