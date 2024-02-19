@@ -195,7 +195,7 @@
   }
 
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-t from-foreground to-foreground/90;
+    @apply text-transparent bg-clip-text bg-gradient-to-t from-secondary-foreground to-secondary-foreground/90;
   }
 
   /* Container */

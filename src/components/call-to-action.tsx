@@ -7,18 +7,18 @@ import { siteNav } from '@/config/site'
 const contactLink = siteNav.find(({ href }) => href === '/contacto')!
 
 const CallToAction = React.forwardRef<HTMLAnchorElement, Omit<LinkProps, 'href' | 'children'>>(
-  ({ className, variant = 'default', size = 'full', ...props }, ref) => {
+  ({ className, variant = 'secondary', size = 'full', ...props }, ref) => {
     return (
       <Link
         href={contactLink.href}
-        className={cn('flex items-center gap-x-2 border text-black', className)}
+        className={cn('flex items-center gap-x-2 border', className)}
         size={size}
         variant={variant}
         ref={ref}
         {...props}
       >
         {contactLink.title}
-        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-black' />
+        <Icons.ArrowUpRight className='btn-icon w-5 h-5 fill-secondary-foreground' />
       </Link>
     )
   }

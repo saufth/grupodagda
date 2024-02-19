@@ -22,8 +22,8 @@ export default function IndexPage () {
                 </span>
               </p>
               <div className='w-full mt-spacing-6 flex flex-col md:flex-row gap-4'>
-                <CallToAction className='text-secondary-foreground [&>.btn-icon]:fill-secondary-foreground' variant='secondary' />
-                <CallToAbout />
+                <CallToAction variant='ghost' />
+                <CallToAbout variant='secondary' />
               </div>
             </div>
           </div>
@@ -31,7 +31,7 @@ export default function IndexPage () {
             <div className='w-full md:w-3/5 2xl:w-1/2 h-full absolute top-0 right-0 overflow-hidden md:border-l'>
               <BackgroundVideo src='/video/home-hero.mp4' />
             </div>
-            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-gradient-to-tr from-accent via-accent/80 to-accent/60' />
+            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-gradient-to-tr from-foreground via-foreground/80 to-foreground/60' />
           </div>
         </div>
       </section>
