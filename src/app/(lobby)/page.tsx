@@ -10,14 +10,14 @@ export default function IndexPage () {
       <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] -mt-[70px] lg:-mt-[90px] pt-[70px] lg:pt-[90px]'>
         <div className='h-full relative z-10 flex flex-col justify-center border-b 2xl:border-b-0'>
           <div className='container relative z-10'>
-            <div className='max-w-xs sm:max-w-md xl:max-w-2xl mx-auto md:mx-0 2xl:pb-12 text-center md:text-left '>
+            <div className='max-w-xs sm:max-w-md xl:max-w-lg mx-auto md:mx-0 2xl:pb-12 text-center md:text-left '>
               <h1>
-                <span className='f-display-2 font-header font-semibold text-balance max-w-[322px] xs:max-w-none text-white md:text-gradient'>
+                <span className='f-display-3 font-header font-semibold text-balance max-w-[322px] xs:max-w-none text-white md:text-gradient'>
                   {siteConfig.description}
                 </span>
               </h1>
               <p className='mt-spacing-5'>
-                <span className='f-subhead-1 font-medium text-balance text-white md:text-gradient'>
+                <span className='f-subhead-2 font-medium text-balance text-white md:text-gradient'>
                   {siteConfig.slogan}.
                 </span>
               </p>
@@ -31,7 +31,7 @@ export default function IndexPage () {
             <div className='w-full md:w-3/5 2xl:w-1/2 h-full absolute top-0 right-0 overflow-hidden md:border-l'>
               <BackgroundVideo src='/video/home-hero.mp4' />
             </div>
-            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-gradient-to-tr from-foreground via-foreground/80 to-foreground/60' />
+            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-gradient-to-tr from-primary via-primary/80 to-primary/60' />
           </div>
         </div>
       </section>
