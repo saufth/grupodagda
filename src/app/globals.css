@@ -13,7 +13,7 @@
     --card-foreground: 98.48% 0 0; /* #FAFAFA */
     --popover: 25.37% 0 0; /* #222222 */
     --popover-foreground: 98.48% 0 0; /* #FAFAFA */
-    --primary: 30.22% 0.025 90.71; /* #332E20 */
+    --primary: 33.9% 0.03 68.64; /* #423527 */
     --primary-foreground: 100% 0 0; /* #FFFFFF */
     --secondary: 56.04% 0.036 82.63; /* #7F735D */
     --secondary-foreground: 100% 0 0; /* #FFFFFF */
@@ -100,7 +100,7 @@
     --card-foreground: 98.48% 0 0; /* #FAFAFA */
     --popover: 25.37% 0 0; /* #222222 */
     --popover-foreground: 98.48% 0 0; /* #FAFAFA */
-    --primary: 30.22% 0.025 90.71; /* #332E20 */
+    --primary: 30.22% 0.025 90.71; /* #423527 */
     --primary-foreground: 100% 0 0; /* #FFFFFF */
     --secondary: 56.04% 0.036 82.63; /* #7F735D */
     --secondary-foreground: 100% 0 0; /* #FFFFFF */
@@ -194,8 +194,8 @@
     @apply text-[1rem] xl:text-[1.125rem] tracking-normal leading-[130%];
   }
 
-  .text-gradient-secondary {
-    @apply text-transparent bg-clip-text bg-gradient-to-t from-secondary-foreground/95 to-secondary-foreground/80;
+  .text-gradient {
+    @apply text-transparent bg-clip-text bg-gradient-to-t from-foreground/95 to-foreground/80;
   }
 
   /* Container */

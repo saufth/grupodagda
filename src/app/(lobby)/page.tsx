@@ -23,8 +23,8 @@ export default function IndexPage () {
                 </span>
               </p>
               <div className='w-full mt-spacing-6 flex flex-col md:flex-row gap-4'>
-                <CallToAction variant='ghost' />
-                <CallToAbout variant='secondary' />
+                <CallToAction />
+                <CallToAbout />
               </div>
             </div>
           </div>
@@ -32,7 +32,7 @@ export default function IndexPage () {
             <div className='w-full md:w-3/5 2xl:w-1/2 h-full absolute top-0 right-0 overflow-hidden md:border-l'>
               <BackgroundVideo src='/video/home-hero.mp4' />
             </div>
-            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-gradient-to-tr from-primary via-primary/80 to-primary/60' />
+            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-background' />
           </div>
         </div>
       </section>
