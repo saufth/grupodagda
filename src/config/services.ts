@@ -50,7 +50,7 @@ export const services: Item[] = [
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/construccion',
     image: {
-      src: '/images/service4.png',
+      src: '/images/service5.png',
       alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
       width: 1280,
       height: 800
