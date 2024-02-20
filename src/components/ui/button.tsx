@@ -16,12 +16,12 @@ const buttonVariants = cva(
         link: 'hover:underline'
       },
       size: {
-        default: 'h-8 xl:h-9 px-4 text-sm xl:text-base',
-        xs: 'text-xs xl:text-sm',
-        sm: 'px-1 text-sm xl:text-base',
-        lg: 'w-fit h-12 xl:h-[50px] px-4 xl:px-6 xl:text-lg font-medium',
-        full: 'w-full md:w-fit h-12 xl:h-[50px] px-4 xl:px-6 xl:text-lg font-medium',
-        icon: 'h-7 xl:h-[33px] w-7 xl:w-[33px]'
+        default: 'h-8 lg:h-9 px-4 text-sm lg:text-base',
+        xs: 'text-xs lg:text-sm',
+        sm: 'px-1 text-sm lg:text-base',
+        lg: 'w-fit h-12 lg:h-[50px] px-4 lg:px-6 lg:text-lg font-medium',
+        full: 'w-full md:w-fit h-12 lg:h-[50px] px-4 lg:px-6 lg:text-lg font-medium',
+        icon: 'h-7 lg:h-[33px] w-7 lg:w-[33px]'
       }
     },
     defaultVariants: {

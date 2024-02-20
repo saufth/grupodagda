@@ -3,7 +3,7 @@ import { contactEmail, siteConfig } from '@/config/site'
 
 export default function SiteFooter () {
   return (
-    <footer className='border-t pt-spacing-7 pb-spacing-7 bg-gradient-to-tr from-muted via-muted to-muted/95'>
+    <footer className='border-t pt-spacing-7 pb-spacing-8 bg-gradient-to-tr from-muted via-muted to-muted/95'>
       <div className='container flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between'>
         <div>
           <span className='text-white font-header text-sm'>

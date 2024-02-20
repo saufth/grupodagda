@@ -6,10 +6,10 @@ export const services: Item[] = [
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/inmobiliaria',
     image: {
-      src: '/images/service1.webp',
+      src: '/images/service1.png',
       alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
-      width: 2840,
-      height: 2840
+      width: 1280,
+      height: 800
     }
   },
   {
@@ -17,10 +17,10 @@ export const services: Item[] = [
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/desarrolladora',
     image: {
-      src: '/images/service2.webp',
+      src: '/images/service2.png',
       alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
-      width: 2840,
-      height: 2840
+      width: 1280,
+      height: 800
     }
   },
   {
@@ -28,10 +28,21 @@ export const services: Item[] = [
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/desarrolladora',
     image: {
-      src: '/images/service3.webp',
+      src: '/images/service3.png',
       alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
-      width: 2840,
-      height: 2840
+      width: 1280,
+      height: 800
+    }
+  },
+  {
+    title: 'Lorem ipsun dolor sit amet consectetur',
+    description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
+    slug: '/desarrolladora',
+    image: {
+      src: '/images/service3.png',
+      alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
+      width: 1280,
+      height: 800
     }
   },
   {
@@ -39,10 +50,10 @@ export const services: Item[] = [
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/construccion',
     image: {
-      src: '/images/service4.webp',
+      src: '/images/service4.png',
       alt: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet',
-      width: 2840,
-      height: 2840
+      width: 1280,
+      height: 800
     }
   }
 ]

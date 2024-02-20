@@ -3,14 +3,15 @@ import BackgroundVideo from '@/components/background-video'
 import { CallToAction, CallToAbout } from '@/components/call-to-action'
 import { services } from '@/config/services'
 import { siteConfig } from '@/config/site'
+import { cn } from '@/lib/utils'
 
 export default function IndexPage () {
   return (
     <>
       <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] -mt-[70px] lg:-mt-[90px] pt-[70px] lg:pt-[90px]'>
-        <div className='h-full relative z-10 flex flex-col justify-center border-b 2xl:border-b-0'>
+        <div className='h-full relative z-10 flex flex-col justify-center border-b'>
           <div className='container relative z-10'>
-            <div className='max-w-xs sm:max-w-md xl:max-w-lg mx-auto md:mx-0 2xl:pb-12 text-center md:text-left '>
+            <div className='max-w-xs sm:max-w-md xl:max-w-lg mx-auto md:mx-0 2xl:pb-12 text-center md:text-left'>
               <h1>
                 <span className='f-display-3 font-header font-semibold text-balance max-w-[322px] xs:max-w-none text-white md:text-gradient'>
                   {siteConfig.description}
@@ -53,7 +54,7 @@ export default function IndexPage () {
           <div className='mt-spacing-9 space-y-spacing-7'>
             {services.map((serviceItem, key) => (
               <article className='cols-container items-center odd:flex-row-reverse' key={key}>
-                <div className='w-6-cols md:w-4-cols lg:w-5-cols h-full odd:sm:pl-12 even:sm:pr-12'>
+                <div className={cn('w-6-cols md:w-4-cols lg:w-5-cols h-full', (key % 2 === 0) ? 'pl-12' : 'pr-12')}>
                   <h3 className='f-heading-1 font-header text-balance'>
                     {serviceItem.title}
                   </h3>

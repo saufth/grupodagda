@@ -33,7 +33,7 @@ export default function SiteHeader () {
           <div className='container'>
             <div className='w-full h-[70px] lg:h-[90px] flex justify-between items-center'>
               <NextLink href='/' onClick={closeMenu}>
-                <Icons.Logoname className={cn('w-full h-12 lg:h-[60px] transition-colors', isMenuOpen && '[&_*]:fill-accent')} />
+                <Icons.Logotype className={cn('w-full h-12 lg:h-[60px] transition-colors', isMenuOpen && '[&_*]:fill-accent')} />
                 <span className='sr-only'>{siteConfig.name} home</span>
               </NextLink>
               <div className='h-full flex items-center gap-x-5'>
