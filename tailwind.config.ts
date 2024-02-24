@@ -98,6 +98,7 @@ const config: Config = {
         '12-cols': 'calc(((12 / var(--container-grid-columns, var(--grid-columns))) * (100% - var(--inner-gutter))) - (var(--inner-gutter) - (12 / var(--container-grid-columns, var(--grid-columns)) * var(--inner-gutter))))',
         '1/2-cols': 'calc(50% - var(--inner-gutter))',
         '1/3-cols': 'calc(33.333% - var(--inner-gutter))',
+        '1/5-cols': `calc(${1 / 5}% - var(--inner-gutter))`,
         '2/3-cols': 'calc(66.666% - var(--inner-gutter))',
         ...breakpoints
       },

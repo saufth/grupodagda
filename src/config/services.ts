@@ -2,7 +2,7 @@ import { type Item } from '@/types'
 
 export const services: Item[] = [
   {
-    title: 'Lorem ipsun dolor sit amet consectetur',
+    title: 'Lorem ipsun dolor sit amet consectetur1',
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/inmobiliaria',
     image: {
@@ -13,7 +13,7 @@ export const services: Item[] = [
     }
   },
   {
-    title: 'Lorem ipsun dolor sit amet consectetur',
+    title: 'Lorem ipsun dolor sit amet consectetur2',
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/desarrolladora',
     image: {
@@ -24,7 +24,7 @@ export const services: Item[] = [
     }
   },
   {
-    title: 'Lorem ipsun dolor sit amet consectetur',
+    title: 'Lorem ipsun dolor sit amet consectetur3',
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/desarrolladora',
     image: {
@@ -35,7 +35,7 @@ export const services: Item[] = [
     }
   },
   {
-    title: 'Lorem ipsun dolor sit amet consectetur',
+    title: 'Lorem ipsun dolor sit amet consectetur4',
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/desarrolladora',
     image: {
@@ -46,7 +46,7 @@ export const services: Item[] = [
     }
   },
   {
-    title: 'Lorem ipsun dolor sit amet consectetur',
+    title: 'Lorem ipsun dolor sit amet consectetur5',
     description: 'Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.',
     slug: '/construccion',
     image: {

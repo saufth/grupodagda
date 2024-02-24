@@ -1,5 +1,6 @@
 'use client'
 import React from 'react'
+import { PaperPlaneIcon } from '@radix-ui/react-icons'
 import { Button } from '@/components/ui/button'
 import { Icons } from '@/components/icons'
 import { Input } from '@/components/ui/input'
@@ -27,7 +28,7 @@ import { zodResolver } from '@hookform/resolvers/zod'
 import { type Inputs, contactEmailSchema } from '@/lib/validations/email'
 import { services } from '@/config/services'
 
-const recaptchaSitekey = String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE)
+const recaptchaSiteKey = String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE || 'recapthca-site-key-not-found')
 
 export default function ContactForm () {
   const [isPending, startTransition] = React.useTransition()
@@ -37,7 +38,7 @@ export default function ContactForm () {
     defaultValues: {
       name: '',
       email: '',
-      category: services[0]!.title,
+      category: services[0]?.title || 'category-no-found',
       subject: ''
     }
   })
@@ -63,7 +64,7 @@ export default function ContactForm () {
       if (!response.ok) {
         switch (response.status) {
           case 422:
-            toast.error('Entrada invalida.')
+            toast.error('Algo salió mal. Revisa que los datos de entrada sean validos.')
             break
           case 500:
             toast.error('Algo salió mal. Revisa que los datos que ingresaste o inténtalo de nuevo más tarde.')
@@ -93,14 +94,13 @@ export default function ContactForm () {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Nombre de contacto</FormLabel>
+              <FormMessage />
               <FormControl>
                 <Input
                   placeholder='Tu nombre completo'
                   {...field}
-                  className='rounded-none'
                 />
               </FormControl>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -110,14 +110,13 @@ export default function ContactForm () {
           render={({ field }) => (
             <FormItem>
               <FormLabel>Correo de contacto</FormLabel>
+              <FormMessage />
               <FormControl>
                 <Input
                   placeholder='correo@ejemplo.com'
                   {...field}
-                  className='rounded-none'
                 />
               </FormControl>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -127,13 +126,14 @@ export default function ContactForm () {
           render={({ field }) => (
             <FormItem className='w-full'>
               <FormLabel>Categoría</FormLabel>
+              <FormMessage />
               <Select
                 value={field.value}
                 onValueChange={(value: typeof field.value) =>
                   field.onChange(value)}
               >
                 <FormControl>
-                  <SelectTrigger className='rounded-none'>
+                  <SelectTrigger>
                     <SelectValue placeholder={field.value} />
                   </SelectTrigger>
                 </FormControl>
@@ -145,7 +145,7 @@ export default function ContactForm () {
                           key={service.title}
                           value={service.title}
                           placeholder='Selecciona una categoría'
-                          className='rounded-none hover:cursor-pointer group-hover:bg-secondary'
+                          className='hover:cursor-pointer group-hover:bg-secondary'
                         >
                           {service.title}
                         </SelectItem>
@@ -154,7 +154,6 @@ export default function ContactForm () {
                   </SelectGroup>
                 </SelectContent>
               </Select>
-              <FormMessage />
             </FormItem>
           )}
         />
@@ -163,39 +162,39 @@ export default function ContactForm () {
           name='subject'
           render={({ field }) => (
             <FormItem>
-              <FormLabel>Descripción de la problemática o solución que necesita</FormLabel>
+              <FormLabel>Cuéntanos acerca de tu proyecto</FormLabel>
+              <FormMessage />
               <FormControl>
                 <Textarea
-                  className='resize-none border-none rounded-none ring-ring ring-1focus-visible:ring-ring'
+                  className='resize-none ring-ring ring-1focus-visible:ring-ring'
                   rows={4}
                   placeholder='Cuéntanos ¿Cómo podemos ayudarte?'
                   {...field}
                 />
               </FormControl>
-              <FormMessage />
             </FormItem>
           )}
         />
         <div className='flex'>
           <ReCAPTCHA
             ref={recaptchaRef}
-            sitekey={recaptchaSitekey}
+            sitekey={recaptchaSiteKey}
           />
         </div>
         <div className='pt-spacing-3'>
           <Button
-            className='[&>*]:text-foreground [&>*]:font-medium bg-gradient'
+            variant='secondary'
             size='full'
             disabled={isPending}
           >
             {isPending
               ? (
-                <span className='flex items-center gap-x-2'>
-                  Enviando <Icons.Spinner className='h-4 w-4' aria-hidden='true' />
+                <span className='flex items-center gap-x-2 text-secondary-foreground'>
+                  Enviando <Icons.Spinner className='h-4 w-4 fill-secondary-foreground' aria-hidden='true' />
                 </span>)
               : (
-                <span className='flex items-center gap-x-2'>
-                  Enviar <Icons.PaperPlane className='h-3.5 w-3.5' aria-hidden='true' />
+                <span className='flex items-center gap-x-2 text-secondary-foreground'>
+                  Enviar <PaperPlaneIcon className='h-3.5 w-3.5 [&_*]:fill-secondary-foreground' aria-hidden='true' />
                 </span>)}
           </Button>
         </div>

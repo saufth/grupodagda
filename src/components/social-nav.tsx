@@ -43,7 +43,7 @@ const SocialNav = ({ items }: Nav) => {
             >
               {socialIcon
                 ? <socialIcon.Icon />
-                : <Icons.ArrowUpRight className='w-7 h-7' />}
+                : <Icons.Shapes className='w-7 h-7' />}
               <span className='sr-only'>{socialTitle}</span>
             </NextLink>
           </li>

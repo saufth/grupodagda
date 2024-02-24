@@ -8,7 +8,7 @@ export const fontSans = FontSans({
 })
 
 export const fontHeader = FonHeader({
-  weight: ['100', '300', '400', '500', '600', '700', '900'],
+  weight: ['100', '300', '400', '500', '600', '700', '800', '900'],
   variable: '--font-header',
   subsets: ['latin'],
   display: 'swap'

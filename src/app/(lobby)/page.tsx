@@ -1,38 +1,54 @@
 import Image from 'next/image'
-import BackgroundVideo from '@/components/background-video'
-import { CallToAction, CallToAbout } from '@/components/call-to-action'
-import { services } from '@/config/services'
-import { siteConfig } from '@/config/site'
+import { Link } from '@/components/ui/link'
+import { Icons } from '@/components/icons'
 import { cn } from '@/lib/utils'
+import { services } from '@/config/services'
+import { businessModels, siteConfig } from '@/config/site'
+
+const businessModelIcons = [
+  () => (<Icons.RehsokLogomark className='w-12 fill-background' />),
+  () => (<Icons.EmahLogomark className='w-[50px] fill-background' />),
+  () => (<Icons.KeyperspotLogomark className='w-[46px] fill-background' />),
+  () => (<Icons.TaxoLogomark className='w-10 fill-background' />),
+  () => (<Icons.SerciusLogomark className='w-[42px] fill-background' />),
+  () => (<Icons.TechgeeksLogomark className='w-14 fill-background' />)
+]
+
+const preparedBusinesModeles = businessModels.map((model, index) => (
+  {
+    ...model,
+    Icon: (businessModelIcons[index] || (() => <Icons.ImageOff className='w-12 h-auto' />))
+  }))
 
 export default function IndexPage () {
   return (
     <>
-      <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] -mt-[70px] lg:-mt-[90px] pt-[70px] lg:pt-[90px]'>
-        <div className='h-full relative z-10 flex flex-col justify-center border-b'>
-          <div className='container relative z-10'>
-            <div className='max-w-xs sm:max-w-md xl:max-w-lg mx-auto md:mx-0 2xl:pb-12 text-center md:text-left'>
+      <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] -mt-[70px] lg:-mt-[158px] pt-[70px] lg:pt-[158px] relative bg-gradient-to-tr from-black via-black/90 to-black/90'>
+        <div className='h-full relative z-10 flex flex-col justify-center border-'>
+          <div className='container relative z-10 2xl:pb-40'>
+            <div className='max-w-xs sm:max-w-xl xl:max-w-5xl mx-auto text-center'>
               <h1>
-                <span className='f-display-3 font-header font-semibold text-balance max-w-[322px] xs:max-w-none text-white md:text-gradient'>
-                  {siteConfig.description}
+                <span className='f-display-1 font-header font-extrabold text-balance text-gradient'>
+                  {siteConfig.slogan}
                 </span>
               </h1>
-              <p className='mt-spacing-5'>
-                <span className='f-subhead-2 font-medium text-balance text-white md:text-gradient'>
-                  {siteConfig.slogan}.
-                </span>
-              </p>
-              <div className='w-full mt-spacing-6 flex flex-col md:flex-row gap-4'>
-                <CallToAction />
-                <CallToAbout />
-              </div>
             </div>
-          </div>
-          <div className='absolute inset-0'>
-            <div className='w-full md:w-3/5 2xl:w-1/2 h-full absolute top-0 right-0 overflow-hidden md:border-l'>
-              <BackgroundVideo src='/video/home-hero.mp4' />
+            <div className='w-full flex items-center justify-center gap-gutter mt-spacing-7'>
+              {preparedBusinesModeles.map((model, key) => (
+                <Link
+                  key={key}
+                  href={model.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  variant='ghost'
+                  size='icon'
+                  className='lg:w-24 lg:h-24 p-0 lg:p-0 grid place-content-center border rounded-2xl'
+                >
+                  <model.Icon />
+                  <span className='sr-only'>{model.name}</span>
+                </Link>
+              ))}
             </div>
-            <div className='hidden md:block w-0 md:w-2/5 2xl:w-1/2 h-full absolute top-0 left-0 bg-background' />
           </div>
         </div>
       </section>
