@@ -39,7 +39,7 @@ export default function SiteHeader () {
             >
               <div className='xl:w-1/4'>
                 <NextLink href='/' onClick={closeMenu}>
-                  <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-20 fill-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
+                  <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-20 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
                   <span className='sr-only'>{siteConfig.name} home</span>
                 </NextLink>
               </div>
