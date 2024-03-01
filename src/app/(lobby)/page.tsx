@@ -1,8 +1,8 @@
-import Image from 'next/image'
+// import Image from 'next/image'
 import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
-import { cn } from '@/lib/utils'
-import { services } from '@/config/services'
+// import { cn } from '@/lib/utils'
+// import { services } from '@/config/services'
 import { businessModels } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 
