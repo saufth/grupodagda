@@ -25,7 +25,7 @@ export default function IndexPage () {
       <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px]'>
         <div className='h-full relative z-10 flex flex-col justify-center'>
           <div className='container pb-20 lg:pb-24 xl:pb-28'>
-            <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center bg-black'>
+            <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
               <h1 className='f-display-1 font-header font-extrabold text-balance uppercase'>
                 <span className='text-gradient'>
                   {siteConfig.slogan}
