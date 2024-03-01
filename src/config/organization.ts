@@ -14,14 +14,14 @@ export const businessModels: BusinessModelsConfig[] = [
     url: 'https://emah.mx'
   },
   {
-    name: 'Taxo Contable',
-    description: 'Negocios, contabilidad y finanzas',
-    url: 'https://taxocontable.com'
-  },
-  {
     name: 'Keyperspot',
     description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial.',
     url: 'https://keyperspot.com'
+  },
+  {
+    name: 'Taxo Contable',
+    description: 'Negocios, contabilidad y finanzas',
+    url: 'https://taxocontable.com'
   },
   {
     name: 'Sercius',
