@@ -141,7 +141,7 @@ const config: Config = {
       },
       keyframes: {
         draw: {
-          '70%': {
+          '30%': {
             'fill-opacity': '0'
           },
           '99%': {
