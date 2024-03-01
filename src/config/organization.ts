@@ -1,4 +1,39 @@
-import { type Heading } from '@/types'
+import { type SiteConfig, type Heading } from '@/types'
+
+type BusinessModelsConfig = Omit<SiteConfig, 'author' | 'mainNav'>
+
+export const businessModels: BusinessModelsConfig[] = [
+  {
+    name: 'Rehsok',
+    description: 'Creamos posibilidades para empresas orientadas a desarrollar un legado de progreso generacional.',
+    url: 'https://rehsok.com'
+  },
+  {
+    name: 'Emah',
+    description: 'Impulsamos a emprendedores y empresarios a consolidar su modelo de negocio, ofreciendo productos intangibles de alto valor agregado para sus clientes',
+    url: 'https://emah.mx'
+  },
+  {
+    name: 'Taxo Contable',
+    description: 'Negocios, contabilidad y finanzas',
+    url: 'https://taxocontable.com'
+  },
+  {
+    name: 'Keyperspot',
+    description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial.',
+    url: 'https://keyperspot.com'
+  },
+  {
+    name: 'Sercius',
+    description: 'Seguridad jurídica empresarial',
+    url: 'https://sercius.mx'
+  },
+  {
+    name: 'Techgeeks',
+    description: 'Tecnología, control inteligente y seguridad',
+    url: 'https://techgeeks.mx'
+  }
+]
 
 export const filosophy: Heading[] = [
   {

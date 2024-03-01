@@ -49,6 +49,18 @@ const config: Config = {
         sans: ['var(--font-sans)', ...fontFamily.sans]
       },
       colors: {
+        rehsok: 'oklch(52.43% 0.115 245.85 / <alpha-value>)', /* #246FA8 */
+        emah: 'oklch(67.59% 0.217 38.8 / <alpha-value>)', /* #FF5500 */
+        keyperspot: 'oklch(66.69% 0.14267133700943277 235.5994356712896 / <alpha-value>)', /* #00A0DF */
+        taxo: {
+          100: 'oklch(87.47% 0.029 238.28 / <alpha-value>)', /* #C5D9E7 */
+          200: 'oklch(82.17% 0.054 250.22 / <alpha-value>)', /* #ABC8E7 */
+          300: 'oklch(72.64% 0.077 241.86 / <alpha-value>)', /* #7BADD3 */
+          400: 'oklch(56.08% 0.131 241.32 / <alpha-value>)', /* #007CBA */
+          500: 'oklch(47.44% 0.122 246.18 / <alpha-value>)' /* #00609C */
+        },
+        sercius: 'oklch(22.53% 0.09079116383808032 259.76824527813346 / <alpha-value>)', /* #001845 */
+        techgeeks: 'oklch(67.99% 0.172 254.69 / <alpha-value>)', /* #4399FF */
         primary: {
           DEFAULT: 'oklch(var(--primary) / <alpha-value>)',
           foreground: 'oklch(var(--primary-foreground) / <alpha-value>)'
@@ -97,9 +109,10 @@ const config: Config = {
         '11-cols': 'calc(((11 / var(--container-grid-columns, var(--grid-columns))) * (100% - var(--inner-gutter))) - (var(--inner-gutter) - (11 / var(--container-grid-columns, var(--grid-columns)) * var(--inner-gutter))))',
         '12-cols': 'calc(((12 / var(--container-grid-columns, var(--grid-columns))) * (100% - var(--inner-gutter))) - (var(--inner-gutter) - (12 / var(--container-grid-columns, var(--grid-columns)) * var(--inner-gutter))))',
         '1/2-cols': 'calc(50% - var(--inner-gutter))',
-        '1/3-cols': 'calc(33.333% - var(--inner-gutter))',
-        '1/5-cols': `calc(${1 / 5}% - var(--inner-gutter))`,
-        '2/3-cols': 'calc(66.666% - var(--inner-gutter))',
+        '1/3-cols': `calc(${(1 / 3) * 100}% - var(--inner-gutter))`,
+        '2/3-cols': `calc(${(2 / 3) * 100}% - var(--inner-gutter))`,
+        '1/5-cols': `calc(${(1 / 5) * 100}% - var(--inner-gutter))`,
+        '1/6-cols': `calc(${(1 / 6) * 100}% - var(--inner-gutter))`,
         ...breakpoints
       },
       height: breakpoints,
@@ -122,6 +135,26 @@ const config: Config = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
+      },
+      animation: {
+        draw: 'draw 2s ease-in 1s forwards'
+      },
+      keyframes: {
+        draw: {
+          '70%': {
+            'fill-opacity': '0'
+          },
+          '99%': {
+            'fill-opacity': '100%',
+            'stroke-dashoffset': '0',
+            'stroke-width': '1'
+          },
+          '100%': {
+            'fill-opacity': '100%',
+            'stroke-dashoffset': '0',
+            'stroke-width': '0'
+          }
+        }
       }
     }
   },

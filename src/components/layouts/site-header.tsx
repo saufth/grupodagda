@@ -2,7 +2,6 @@
 import React from 'react'
 import NextLink from 'next/link'
 import { ArrowRightIcon } from '@radix-ui/react-icons'
-// import { CallToAction } from '@/components/call-to-action'
 import { Icons } from '@/components/icons'
 import { Link } from '@/components/ui/link'
 import { useScroll, useMotionValueEvent } from 'framer-motion'
@@ -25,24 +24,29 @@ export default function SiteHeader () {
     <>
       <header
         className={cn(
-          'w-full sticky top-0 left-0 z-40 transition-all duration-300',
-          isOnTop && '',
-          isMenuOpen && 'bg-transparent'
+          'w-full sticky top-0 left-0 z-40 transition-all duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
+          isOnTop && 'backdrop-filter-none',
+          isMenuOpen && 'backdrop-filter-none'
         )}
       >
         <nav className='relative' aria-label={`${siteConfig.name} Directory`}>
-          <div className='full-container'>
-            <div className='w-full pt-16 pb-gutter flex justify-between'>
+          <div className='full-container px-gutter'>
+            <div
+              className={cn(
+                'w-full h-24 lg:h-28 xl:h-36 flex justify-between items-center transition-all duration-300',
+                isOnTop && 'xl:pt-12 2xl:pt-12 xl:px-gutter'
+              )}
+            >
               <div className='xl:w-1/4'>
                 <NextLink href='/' onClick={closeMenu}>
-                  <Icons.Logotype className={cn('w-auto h-12 xl:h-[70px] transition-all duration-500 [&_*]:fill-accent', isMenuOpen && '[&_*]:fill-accent', isOnTop && '')} />
+                  <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-20 fill-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
                   <span className='sr-only'>{siteConfig.name} home</span>
                 </NextLink>
               </div>
-              <button className='w-6 lg:w-[25px] h-5 lg:h-[22px] relative 2xl:mr-16 [&>span]:shadow' onClick={toggleMenu}>
-                <span className={cn('w-full h-0.5 bg-background absolute top-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
-                <span className={cn('w-full h-0.5 bg-background absolute inset-0 m-auto transition-all duration-500', isMenuOpen && 'opacity-0')} />
-                <span className={cn('w-full h-0.5 bg-background absolute bottom-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
+              <button className='w-6 lg:w-[25px] h-[18px] lg:h-[22px] relative mr-2 2xl:mt-0 [&>span]:shadow' onClick={toggleMenu}>
+                <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
+                <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-all duration-500', isMenuOpen && 'opacity-0')} />
+                <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
                 <span className='sr-only'>Toggle menu</span>
               </button>
               {/* <div className='h-full hidden xl:flex items-center gap-x-5'>
@@ -65,7 +69,7 @@ export default function SiteHeader () {
       </header>
       <div
         className={cn(
-          'w-full h-0 bg-gradient-to-tl from-black/95 via-black/95 to-foreground/95 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
+          'w-full h-0 bg-gradient-to-tl from-black/95 via-black/95 to-primary/95 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
           isMenuOpen && 'h-[100dvh]'
         )}
       >

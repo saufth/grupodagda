@@ -7,8 +7,8 @@
 @layer base {
   :root {
     /* Theme */
-    --background: 93.11% 0.015 90.24; /* #ECE8DD */
-    --foreground: 30.22% 0.025 90.71; /* #332E20 */
+    --background: 0% 0 0; /* #000000 */
+    --foreground: 96.74% 0.001 286.38; /* #F4F4F5 */
     --card: 100% 0 0; /* #FFFFFF */
     --card-foreground:  30.22% 0.025 90.71; /* #332E20 */
     --popover: 100% 0 0; /* #FFFFFF */
@@ -92,11 +92,11 @@
       --container-width: 1632px;
     }
   }
-
+  /* 93.11% 0.015 90.24; #ECE8DD */
   .dark {
     /* Theme */
-    --background: 93.11% 0.015 90.24; /* #ECE8DD */
-    --foreground: 30.22% 0.025 90.71; /* #332E20 */
+    --background: 0% 0 0;  /* #000000 */
+    --foreground: 96.74% 0.001 286.38; /* #F4F4F5 */
     --card: 100% 0 0; /* #FFFFFF */
     --card-foreground:  30.22% 0.025 90.71; /* #332E20 */
     --popover: 100% 0 0; /* #FFFFFF */
@@ -156,7 +156,7 @@
   /* Typography */
 
   .f-display-1 {
-    @apply text-5xl sm:text-6xl xl:text-8xl leading-[110%] lg:leading-[110%] xl:leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02em];
+    @apply text-[2.3rem] sm:text-6xl xl:text-8xl leading-[110%] lg:leading-[110%] xl:leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02em];
   }
 
   .f-display-2 {
@@ -196,7 +196,7 @@
   }
 
   .text-gradient {
-    @apply text-transparent bg-clip-text bg-gradient-to-t from-background via-background/90 to-background/80;
+    @apply text-transparent bg-clip-text bg-gradient-to-t from-foreground via-foreground/90 to-foreground/80;
   }
 
   /* Container */

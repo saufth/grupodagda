@@ -1,6 +1,5 @@
-'use client'
 import React from 'react'
-import { Icons } from './icons'
+import { Icons } from '@/components/icons'
 
 export default function Background ({ children }: React.PropsWithChildren) {
   return (

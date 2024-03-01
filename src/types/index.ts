@@ -1,3 +1,5 @@
+import { type Author } from 'next/dist/lib/metadata/types/metadata-types'
+
 export interface Title { title: string }
 
 export interface Description {
@@ -65,6 +67,15 @@ export interface Subcategory extends ItemOptional {
 
 export interface Category extends ItemOptional {
   items: Subcategory[]
+}
+
+export interface SiteConfig {
+  name: string,
+  description: string,
+  slogan?: string,
+  url: URL | string,
+  author: Author,
+  mainNav: MainNavItem[]
 }
 
 export interface DocumentWithFullscreen extends Document {
