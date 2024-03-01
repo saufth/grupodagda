@@ -2,12 +2,10 @@
 import React from 'react'
 import { Canvas, useFrame, useLoader } from '@react-three/fiber'
 import { TextureLoader, type Mesh } from 'three'
-import useDimensions from '@/hooks/use-dimensions'
 import { cn } from '@/lib/utils'
 
 export default function BackgroundSmoke ({ children, className, ref, ...props }: React.ComponentPropsWithRef<'div'>) {
   const containerRef = React.useRef<HTMLDivElement>(null!)
-  const { height } = useDimensions(containerRef.current)
 
   const NUM_PARTICLES = 200
 
@@ -48,14 +46,12 @@ export default function BackgroundSmoke ({ children, className, ref, ...props }:
     <div className={cn('relative z-20', className)} ref={ref} {...props}>
       {children}
       <div className='w-full h-screen fixed top-0 -z-10 overflow-hidden' ref={containerRef}>
-        <div style={{ height: `${height + 100}px` }}>
-          <Canvas className='opacity-60'>
-            <color attach='background' args={['#000000']} />
-            <directionalLight position={[-1, 3, 1]} color='#000000' intensity={1} />
-            <perspectiveCamera position={[0, 0, 10]} fov={75} near={0.1} far={100} />
-            <Smoke />
-          </Canvas>
-        </div>
+        <Canvas className='opacity-60'>
+          <color attach='background' args={['#000000']} />
+          <directionalLight position={[-1, 3, 1]} color='#000000' intensity={1} />
+          <perspectiveCamera position={[0, 0, 10]} fov={75} near={0.1} far={100} />
+          <Smoke />
+        </Canvas>
       </div>
     </div>
   )
