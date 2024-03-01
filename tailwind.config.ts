@@ -144,10 +144,13 @@ const config: Config = {
           '30%': {
             'fill-opacity': '0'
           },
+          '80%': {
+            'stroke-width': '1'
+          },
           '99%': {
             'fill-opacity': '100%',
             'stroke-dashoffset': '0',
-            'stroke-width': '1'
+            'stroke-width': '0'
           },
           '100%': {
             'fill-opacity': '100%',
