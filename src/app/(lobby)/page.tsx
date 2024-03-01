@@ -7,12 +7,12 @@ import { businessModels } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 
 const businessModelIcons = [
-  () => (<Icons.RehsokLogomark className='w-12 sm:w-14 lg:w-16 xl:w-[77px] h-auto fill-zonc-300 group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.EmahLogomark className='w-12 sm:w-14 lg:w-16 xl:w-20 h-auto fill-emah group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.KeyperspotLogomark className='w-10 sm:w-12 lg:w-14 xl:w-[72px] h-auto fill-keyperspot group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.SerciusLogomark className='w-10 sm:w-12 lg:w-14 xl:w-[72px] h-auto fill-zinc-300 group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.TaxoLogomark className='w-10 sm:w-12 lg:w-14 xl:w-[72px] h-auto group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.TechgeeksLogomark className='w-14 sm:w-[66px] lg:w-[74px] xl:w-[88px] h-auto fill-techgeeks group-hover:scale-110 transition-all duration-300' />)
+  () => (<Icons.RehsokLogomark className='w-9 sm:w-12 xl:w-16 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
+  () => (<Icons.EmahLogomark className='w-9 sm:w-12 xl:w-16 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
+  () => (<Icons.KeyperspotLogomark className='w-7 sm:w-11 xl:w-14 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
+  () => (<Icons.TaxoLogomark className='w-8 sm:w-10 xl:w-14 h-auto [&_*]:fill-foreground group-hover:scale-110 transition-all duration-300' />),
+  () => (<Icons.SerciusLogomark className='w-8 sm:w-10 xl:w-14 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
+  () => (<Icons.TechgeeksLogomark className='w-10 sm:w-14 xl:w-[74px] h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />)
 ]
 
 const preparedBusinesModeles = businessModels.map((model, index) => ({
@@ -32,15 +32,15 @@ export default function IndexPage () {
                 </span>
               </h1>
             </div>
-            <div className='max-w-2xl xl:max-w-4xl mx-auto'>
+            <div className='max-w-[270px] sm:max-w-2xl xl:max-w-4xl mx-auto'>
               <ul className='cols-container gap-y-gutter mt-spacing-7'>
                 {preparedBusinesModeles.map((model, key) => (
-                  <li key={key} className='w-2-cols sm:w-1/6-cols lg:w-2-cols h-[72px] sm:h-20 lg:h-24 xl:h-32'>
+                  <li key={key} className='w-2-cols sm:w-1/6-cols lg:w-2-cols'>
                     <NextLink
                       href={model.url}
                       target='_blank'
                       rel='noreferrer'
-                      className='group w-full h-full grid place-content-center border-y-2 border-foreground rounded-sm'
+                      className='group w-20 sm:w-full h-20 sm:h-[88px] md:h-24 xl:h-32 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
                       <model.Icon />
                       <span className='sr-only'>{model.name}</span>
