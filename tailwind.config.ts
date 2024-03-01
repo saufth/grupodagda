@@ -137,7 +137,7 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       animation: {
-        draw: 'draw 2s ease-in 1s forwards'
+        draw: 'draw 1.5s ease-in forwards'
       },
       keyframes: {
         draw: {
