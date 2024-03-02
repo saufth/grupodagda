@@ -14,7 +14,7 @@ export const socialIcons = [
   },
   {
     title: 'tiktok',
-    Icon: () => <Icons.TikTok className='w-7 h-7' />
+    Icon: () => <Icons.Tiktok className='w-7 h-7' />
   },
   {
     title: 'linkedin',
