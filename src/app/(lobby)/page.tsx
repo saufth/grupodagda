@@ -6,6 +6,7 @@ import { Icons } from '@/components/icons'
 import { services } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
+import { Link } from '@/components/ui/link'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
@@ -83,6 +84,16 @@ export default function IndexPage () {
                       {model.description}.
                     </p>
                   </div>
+                  <Link
+                    href={model.url}
+                    target='_blank'
+                    rel='noreferrer'
+                    variant='ghost'
+                    size='lg'
+                    className='mx-auto mt-spacing-5'
+                  >
+                    Visitar sitio
+                  </Link>
                 </div>
               </article>
             ))}
