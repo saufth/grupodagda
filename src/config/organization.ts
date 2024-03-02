@@ -1,37 +1,44 @@
-import { type SiteConfig, type Heading } from '@/types'
+import { type Heading, type SiteConfig } from '@/types'
+import { siteConfig } from './site'
 
-type BusinessModelsConfig = Omit<SiteConfig, 'author' | 'mainNav'>
+export const slogan = siteConfig.description
 
-export const businessModels: BusinessModelsConfig[] = [
+export const services: Omit<SiteConfig, 'mainNav'>[] = [
   {
     name: 'Rehsok',
     description: 'Creamos posibilidades para empresas orientadas a desarrollar un legado de progreso generacional.',
-    url: 'https://rehsok.com'
+    url: 'https://rehsok.com',
+    author: siteConfig.author
   },
   {
     name: 'Emah',
     description: 'Impulsamos a emprendedores y empresarios a consolidar su modelo de negocio, ofreciendo productos intangibles de alto valor agregado para sus clientes',
-    url: 'https://emah.mx'
+    url: 'https://emah.mx',
+    author: siteConfig.author
   },
   {
     name: 'Keyperspot',
     description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial.',
-    url: 'https://keyperspot.com'
+    url: 'https://keyperspot.com',
+    author: siteConfig.author
   },
   {
     name: 'Taxo Contable',
     description: 'Negocios, contabilidad y finanzas',
-    url: 'https://taxocontable.com'
+    url: 'https://taxocontable.com',
+    author: siteConfig.author
   },
   {
     name: 'Sercius',
     description: 'Seguridad jurídica empresarial',
-    url: 'https://sercius.mx'
+    url: 'https://sercius.mx',
+    author: siteConfig.author
   },
   {
     name: 'Techgeeks',
     description: 'Tecnología, control inteligente y seguridad',
-    url: 'https://techgeeks.mx'
+    url: 'https://techgeeks.mx',
+    author: siteConfig.author
   }
 ]
 

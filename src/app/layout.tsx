@@ -8,12 +8,13 @@ import { cn } from '@/lib/utils'
 import { fontSans, fontHeader } from '@/lib/fonts'
 import { services } from '@/config/services'
 import { siteConfig } from '@/config/site'
-import './globals.css'
+import { slogan } from '@/config/organization'
+import '@/styles/globals.css'
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: `${siteConfig.name} ⚊ ${siteConfig.slogan}`,
+    default: `${siteConfig.name} ⚊ ${slogan}`,
     template: `${siteConfig.name} ⚊ %s`
   },
   description: siteConfig.description,

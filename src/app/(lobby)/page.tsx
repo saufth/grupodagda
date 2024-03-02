@@ -3,38 +3,42 @@ import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
 // import { cn } from '@/lib/utils'
 // import { services } from '@/config/services'
-import { businessModels } from '@/config/organization'
+import { services } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 
+const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
+
 const businessModelIcons = [
-  () => (<Icons.RehsokLogomark className='w-9 sm:w-12 xl:w-16 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.EmahLogomark className='w-9 sm:w-12 xl:w-16 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.KeyperspotLogomark className='w-7 sm:w-11 xl:w-14 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.TaxoLogomark className='w-8 sm:w-10 xl:w-14 h-auto [&_*]:fill-foreground group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.SerciusLogomark className='w-8 sm:w-10 xl:w-14 h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />),
-  () => (<Icons.TechgeeksLogomark className='w-10 sm:w-14 xl:w-[74px] h-auto fill-foreground group-hover:scale-110 transition-all duration-300' />)
+  () => (<Icons.RehsokLogomark className={`w-9 sm:w-12 xl:w-16 ${iconsBaseStyle}`} />),
+  () => (<Icons.EmahLogomark className={`w-9 sm:w-12 xl:w-16 ${iconsBaseStyle}`} />),
+  () => (<Icons.KeyperspotLogomark className={`w-7 sm:w-11 xl:w-14 ${iconsBaseStyle}`} />),
+  () => (<Icons.TaxoLogomark className={`w-8 sm:w-10 xl:w-14 [&_*]:fill-foreground ${iconsBaseStyle}`} />),
+  () => (<Icons.SerciusLogomark className={`w-8 sm:w-10 xl:w-14 ${iconsBaseStyle}`} />),
+  () => (<Icons.TechgeeksLogomark className={`w-10 sm:w-14 xl:w-[74px] ${iconsBaseStyle}`} />)
 ]
 
-const preparedBusinesModeles = businessModels.map((model, index) => ({
+const businesModeles = services.map((model, index) => ({
   ...model,
-  Icon: (businessModelIcons[index] || (() => <Icons.ImageOff className='w-12 h-auto' />))
+  Icon: (businessModelIcons[index] || (() => <Icons.ImageOff className='w-9 h-auto' />))
 }))
+
 export default function IndexPage () {
   return (
     <>
       <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px]'>
         <div className='h-full relative z-10 flex flex-col justify-center'>
-          <div className='container pb-20 lg:pb-24 xl:pb-28'>
+          <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
-              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase'>
+              <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-24 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
+              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-5'>
                 <span className='text-gradient'>
-                  {siteConfig.slogan}
+                  {siteConfig.description}
                 </span>
               </h1>
             </div>
-            <div className='max-w-[270px] sm:max-w-2xl xl:max-w-4xl mx-auto'>
-              <ul className='cols-container gap-y-gutter mt-spacing-7'>
-                {preparedBusinesModeles.map((model, key) => (
+            <div className='max-w-[270px] sm:max-w-2xl xl:max-w-4xl mx-auto mt-spacing-6'>
+              <ul className='cols-container gap-y-gutter'>
+                {businesModeles.map((model, key) => (
                   <li key={key} className='w-2-cols sm:w-1/6-cols lg:w-2-cols'>
                     <NextLink
                       href={model.url}

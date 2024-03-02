@@ -72,7 +72,6 @@ export interface Category extends ItemOptional {
 export interface SiteConfig {
   name: string,
   description: string,
-  slogan?: string,
   url: URL | string,
   author: Author,
   mainNav: MainNavItem[]

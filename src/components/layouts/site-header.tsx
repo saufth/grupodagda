@@ -24,7 +24,7 @@ export default function SiteHeader () {
     <>
       <header
         className={cn(
-          'w-full sticky top-0 left-0 z-40 transition-all duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
+          'w-full absolute top-0 left-0 z-40 transition-all duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
           isOnTop && 'backdrop-filter-none',
           isMenuOpen && 'backdrop-filter-none'
         )}
@@ -33,22 +33,23 @@ export default function SiteHeader () {
           <div className='full-container px-gutter'>
             <div
               className={cn(
-                'w-full h-24 lg:h-28 xl:h-36 flex justify-between items-center transition-all duration-300',
-                isOnTop && 'xl:pt-12 2xl:pt-12 xl:px-gutter'
+                'flex justify-between items-center transition-all duration-300 2xl:pt-20',
+                isOnTop && ''
               )}
             >
-              <div className='xl:w-1/4'>
-                <NextLink href='/' onClick={closeMenu}>
-                  <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-20 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
-                  <span className='sr-only'>{siteConfig.name} home</span>
-                </NextLink>
+              <div className='xl:w-1/4' />
+              <NextLink href='/' onClick={closeMenu}>
+                <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-24 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
+                <span className='sr-only'>{siteConfig.name} home</span>
+              </NextLink>
+              <div className='xl:w-1/4 flex justify-end'>
+                <button className='w-6 lg:w-[25px] h-[18px] lg:h-[22px] relative mr-2 2xl:mt-0 [&>span]:shadow' onClick={toggleMenu}>
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-all duration-500', isMenuOpen && 'opacity-0')} />
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
+                  <span className='sr-only'>Toggle menu</span>
+                </button>
               </div>
-              <button className='w-6 lg:w-[25px] h-[18px] lg:h-[22px] relative mr-2 2xl:mt-0 [&>span]:shadow' onClick={toggleMenu}>
-                <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
-                <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-all duration-500', isMenuOpen && 'opacity-0')} />
-                <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
-                <span className='sr-only'>Toggle menu</span>
-              </button>
               {/* <div className='h-full hidden xl:flex items-center gap-x-5'>
                 <ul className='h-full flex items-center gap-x-5'>
                   {siteNav.map((navItem, key) => (

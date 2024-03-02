@@ -30,8 +30,7 @@ export const contactEmail = `contacto@${domain}`
 
 export const siteConfig: SiteConfig = {
   name: 'Grupo DAGDA',
-  description: 'Lorem ipsun dolor sit amet espectatu',
-  slogan: 'Impulsamos y consolidamos tu legado',
+  description: 'Impulsamos y consolidamos tu legado',
   url: `https://${domain}`,
   author,
   mainNav: [

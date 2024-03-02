@@ -1,4 +1,5 @@
 import { Link } from '@/components/ui/link'
+import { services } from '@/config/organization'
 import { contactEmail, siteConfig } from '@/config/site'
 
 export default function SiteFooter () {
@@ -30,10 +31,10 @@ export default function SiteFooter () {
             Soluciones
           </div>
           <ul className='space-y-spacing-2 mt-spacing-3'>
-            {siteConfig.mainNav.map((navItem, key) => (
+            {services.map((model, key) => (
               <li key={key}>
-                <Link href={navItem.href} className='text-base xl:text-lg font-light text-white'>
-                  {navItem.title}
+                <Link href={model.url} className='text-base xl:text-lg font-light text-white'>
+                  {model.name}
                 </Link>
               </li>
             ))}
