@@ -35,7 +35,7 @@ export const siteConfig: SiteConfig = {
   author,
   mainNav: [
     {
-      title: 'Inicio',
+      title: 'Página de inicio',
       href: '/'
     },
     ...siteNav

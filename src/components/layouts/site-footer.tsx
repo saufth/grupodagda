@@ -5,22 +5,17 @@ import { contactEmail, siteConfig } from '@/config/site'
 export default function SiteFooter () {
   /* bg-gradient-to-tr from-muted via-muted to-muted/95 */
   return (
-    <footer className='border-t pt-spacing-7 pb-spacing-8'>
+    <footer className='pt-spacing-7 pb-spacing-8'>
       <div className='container flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between'>
         <div>
-          <span className='text-white font-header text-sm'>
-            {`${siteConfig.name} © ${new Date().getFullYear()}`}
-          </span>
-        </div>
-        <div>
           <div className='text-base sm:text-lg font-medium text-muted-foreground'>
-            Directorio
+            {siteConfig.name}
           </div>
           <ul className='space-y-spacing-2 mt-spacing-3'>
-            {siteConfig.mainNav.map((navItem, key) => (
+            {services.map((item, key) => (
               <li key={key}>
-                <Link href={navItem.href} className='text-base xl:text-lg font-light text-white'>
-                  {navItem.title}
+                <Link href={item.url} className='text-base xl:text-lg font-light text-white'>
+                  {item.name}
                 </Link>
               </li>
             ))}
@@ -28,13 +23,13 @@ export default function SiteFooter () {
         </div>
         <div>
           <div className='text-base font-medium sm:text-lg text-muted-foreground'>
-            Soluciones
+            Directorio
           </div>
           <ul className='space-y-spacing-2 mt-spacing-3'>
-            {services.map((model, key) => (
+            {siteConfig.mainNav.map((item, key) => (
               <li key={key}>
-                <Link href={model.url} className='text-base xl:text-lg font-light text-white'>
-                  {model.name}
+                <Link href={item.href} className='text-base xl:text-lg font-light text-white'>
+                  {item.title}
                 </Link>
               </li>
             ))}
@@ -47,6 +42,11 @@ export default function SiteFooter () {
           <Link className='text-base xl:text-lg font-light text-white' href={`mailto:${contactEmail}`}>
             {contactEmail}
           </Link>
+        </div>
+        <div>
+          <span className='text-white font-header text-sm'>
+            {`${siteConfig.name} © ${new Date().getFullYear()}`}
+          </span>
         </div>
       </div>
     </footer>

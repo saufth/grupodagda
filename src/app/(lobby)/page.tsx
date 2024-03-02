@@ -9,12 +9,12 @@ import { siteConfig } from '@/config/site'
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
 const businessModelIcons = [
-  () => (<Icons.RehsokLogomark className={`w-9 sm:w-12 xl:w-16 ${iconsBaseStyle}`} />),
-  () => (<Icons.EmahLogomark className={`w-9 sm:w-12 xl:w-16 ${iconsBaseStyle}`} />),
-  () => (<Icons.KeyperspotLogomark className={`w-7 sm:w-11 xl:w-14 ${iconsBaseStyle}`} />),
-  () => (<Icons.TaxoLogomark className={`w-8 sm:w-10 xl:w-14 [&_*]:fill-foreground ${iconsBaseStyle}`} />),
-  () => (<Icons.SerciusLogomark className={`w-8 sm:w-10 xl:w-14 ${iconsBaseStyle}`} />),
-  () => (<Icons.TechgeeksLogomark className={`w-10 sm:w-14 xl:w-[74px] ${iconsBaseStyle}`} />)
+  () => (<Icons.RehsokLogomark className={`w-8 sm:w-10 xl:w-[50px] ${iconsBaseStyle}`} />),
+  () => (<Icons.EmahLogomark className={`w-9 sm:w-11 xl:w-[52px] ${iconsBaseStyle}`} />),
+  () => (<Icons.KeyperspotLogomark className={`w-8 sm:w-10 xl:w-12 ${iconsBaseStyle}`} />),
+  () => (<Icons.TaxoLogomark className={`w-8 sm:w-10 xl:w-11 [&_*]:fill-foreground ${iconsBaseStyle}`} />),
+  () => (<Icons.SerciusLogomark className={`w-8 sm:w-10 xl:w-11 ${iconsBaseStyle}`} />),
+  () => (<Icons.TechgeeksLogomark className={`w-11 sm:w-[52px] xl:w-[58px] ${iconsBaseStyle}`} />)
 ]
 
 const businesModeles = services.map((model, index) => ({
@@ -25,18 +25,18 @@ const businesModeles = services.map((model, index) => ({
 export default function IndexPage () {
   return (
     <>
-      <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px]'>
+      <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] overflow-hidden'>
         <div className='h-full relative z-10 flex flex-col justify-center'>
           <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
-              <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-24 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
-              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-5'>
+              <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
+              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6'>
                 <span className='text-gradient'>
                   {siteConfig.description}
                 </span>
               </h1>
             </div>
-            <div className='max-w-[270px] sm:max-w-2xl xl:max-w-4xl mx-auto mt-spacing-6'>
+            <div className='max-w-60 sm:max-w-xl xl:max-w-2xl mx-auto mt-spacing-6'>
               <ul className='cols-container gap-y-gutter'>
                 {businesModeles.map((model, key) => (
                   <li key={key} className='w-2-cols sm:w-1/6-cols lg:w-2-cols'>
@@ -44,7 +44,7 @@ export default function IndexPage () {
                       href={model.url}
                       target='_blank'
                       rel='noreferrer'
-                      className='group w-20 sm:w-full h-20 sm:h-[88px] md:h-24 xl:h-32 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
+                      className='group w-full sm:w-full h-[70px] sm:h-[88px] md:h-20 xl:h-24 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
                       <model.Icon />
                       <span className='sr-only'>{model.name}</span>
