@@ -17,7 +17,7 @@ export default function BackgroundSmoke ({ children, className, ref, ...props }:
       smokeRef.current.forEach(particle => {
         particle.current?.position.set(
           Math.random() * 500 - 250,
-          -110,
+          -100,
           Math.random() * 1000 - 100
         )
         particle.current?.rotateZ(Math.random() * Math.PI * 2)

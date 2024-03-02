@@ -28,7 +28,7 @@ const businesModeles = services.map((model, index) => ({
 export default function IndexPage () {
   return (
     <>
-      <section className='full-screen'>
+      <section className='pt-spacing-7 pb-spacing-9'>
         <div className='h-full relative z-10 flex flex-col justify-center'>
           <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
@@ -76,7 +76,14 @@ export default function IndexPage () {
                     (key % 2 === 0) ? '' : ''
                   )}
                 >
-                  <model.Icon className='w-16 sm:w-24 xl:w-32 h-auto mx-auto' />
+                  <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
+                    <model.Icon
+                      className={cn(
+                        'w-12 sm:w-16 xl:w-20 h-auto',
+                        model.name === 'Sercius' && 'w-10 sm:w-12 xl:w-14'
+                      )}
+                    />
+                  </div>
                   <div className='max-w-4xl mx-auto text-center mt-spacing-5'>
                     <h3 className='f-display-3 font-header font-semibold text-balance'>
                       {model.name}
