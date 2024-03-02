@@ -7,6 +7,7 @@ import { services } from '@/config/organization'
 import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { Link } from '@/components/ui/link'
+import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
@@ -38,15 +39,15 @@ export default function IndexPage () {
                 </span>
               </h1>
             </div>
-            <div className='max-w-60 sm:max-w-xl xl:max-w-2xl mx-auto mt-spacing-6'>
-              <ul className='cols-container gap-y-gutter'>
+            <div className='mt-spacing-6'>
+              <ul className='max-w-80 sm:max-w-full mx-auto sm:mx-0 flex flex-wrap justify-center gap-gutter'>
                 {businesModeles.map((model, key) => (
-                  <li key={key} className='w-2-cols sm:w-1/6-cols lg:w-2-cols'>
+                  <li key={key}>
                     <NextLink
                       href={model.url}
                       target='_blank'
                       rel='noreferrer'
-                      className='group w-full sm:w-full h-[70px] sm:h-[88px] md:h-20 xl:h-24 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
+                      className='group w-[70px] md:w-20 xl:w-24 h-[70px] md:h-20 xl:h-24 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
                       <model.Icon className='[&_*]:fill-foreground' />
                       <span className='sr-only'>{model.name}</span>
@@ -93,6 +94,7 @@ export default function IndexPage () {
                     className='mx-auto mt-spacing-5'
                   >
                     Visitar sitio
+                    <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
                   </Link>
                 </div>
               </article>
