@@ -142,8 +142,7 @@ const config: Config = {
       keyframes: {
         draw: {
           '30%': {
-            'fill-opacity': '0',
-            'stroke-width': '0'
+            'fill-opacity': '0'
           },
           '80%': {
             'stroke-width': '1'
