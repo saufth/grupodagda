@@ -80,15 +80,10 @@ export default function IndexPage () {
               <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
             </Link>
           </div>
-          <div className=''>
+          <div>
             {businesModeles.map((model, key) => (
               <article className='border-b border-zinc-200' key={key}>
-                <div
-                  className={cn(
-                    'full-screen grid place-content-center',
-                    (key % 2 === 0) ? '' : ''
-                  )}
-                >
+                <div className='grid place-content-center py-spacing-9'>
                   <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
                     <model.Icon
                       className={cn(
@@ -111,10 +106,10 @@ export default function IndexPage () {
                     rel='noreferrer'
                     variant='ghost'
                     size='lg'
-                    className='mx-auto mt-spacing-5'
+                    className='mx-auto mt-spacing-6 flex items-center gap-spacing-2'
                   >
                     Visitar sitio
-                    <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
+                    <ArrowTopRightIcon className='w-auto h-4 lg:h-[18px]' />
                   </Link>
                 </div>
               </article>
