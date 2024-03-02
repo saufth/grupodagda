@@ -35,7 +35,7 @@ export const services: Omit<SiteConfig, 'mainNav'>[] = [
     author: siteConfig.author
   },
   {
-    name: 'Techgeeks',
+    name: 'TechGeeks',
     description: 'Tecnología, control inteligente y seguridad',
     url: 'https://techgeeks.mx',
     author: siteConfig.author

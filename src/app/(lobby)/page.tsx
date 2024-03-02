@@ -5,16 +5,17 @@ import { Icons } from '@/components/icons'
 // import { services } from '@/config/services'
 import { services } from '@/config/organization'
 import { siteConfig } from '@/config/site'
+import { cn } from '@/lib/utils'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
 const businessModelIcons = [
-  () => (<Icons.RehsokLogomark className={`w-[34px] sm:w-10 xl:w-[50px] ${iconsBaseStyle}`} />),
-  () => (<Icons.EmahLogomark className={`w-[38px] sm:w-11 xl:w-[52px] ${iconsBaseStyle}`} />),
-  () => (<Icons.KeyperspotLogomark className={`w-[34px] sm:w-10 xl:w-12 ${iconsBaseStyle}`} />),
-  () => (<Icons.TaxoLogomark className={`w-8 sm:w-10 xl:w-11 [&_*]:fill-foreground ${iconsBaseStyle}`} />),
-  () => (<Icons.SerciusLogomark className={`w-8 sm:w-10 xl:w-11 ${iconsBaseStyle}`} />),
-  () => (<Icons.TechgeeksLogomark className={`w-11 sm:w-[52px] xl:w-[58px] ${iconsBaseStyle}`} />)
+  ({ className } : { className?: string }) => (<Icons.RehsokLogomark className={cn('w-[34px] sm:w-10 xl:w-[50px] fill-rehsok', iconsBaseStyle, className)} />),
+  ({ className } : { className?: string }) => (<Icons.EmahLogomark className={cn('w-[38px] sm:w-11 xl:w-[52px] fill-emah', iconsBaseStyle, className)} />),
+  ({ className } : { className?: string }) => (<Icons.KeyperspotLogomark className={cn('w-[34px] sm:w-10 xl:w-12 fill-keyperspot', iconsBaseStyle, className)} />),
+  ({ className } : { className?: string }) => (<Icons.TaxoLogomark className={cn('w-8 sm:w-10 xl:w-11 fill-taxo', iconsBaseStyle, className)} />),
+  ({ className } : { className?: string }) => (<Icons.SerciusLogomark className={cn('w-8 sm:w-10 xl:w-11 fill-rehsok', iconsBaseStyle, className)} />),
+  ({ className } : { className?: string }) => (<Icons.TechgeeksLogomark className={cn('w-11 sm:w-[52px] xl:w-[58px] fill-techgeeks', iconsBaseStyle, className)} />)
 ]
 
 const businesModeles = services.map((model, index) => ({
@@ -25,7 +26,7 @@ const businesModeles = services.map((model, index) => ({
 export default function IndexPage () {
   return (
     <>
-      <section className='h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] overflow-hidden'>
+      <section className='full-screen'>
         <div className='h-full relative z-10 flex flex-col justify-center'>
           <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
@@ -46,7 +47,7 @@ export default function IndexPage () {
                       rel='noreferrer'
                       className='group w-full sm:w-full h-[70px] sm:h-[88px] md:h-20 xl:h-24 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
-                      <model.Icon />
+                      <model.Icon className='[&_*]:fill-foreground' />
                       <span className='sr-only'>{model.name}</span>
                     </NextLink>
                   </li>
@@ -57,55 +58,35 @@ export default function IndexPage () {
         </div>
       </section>
       <section id='nosotros'>
-        <div className='container py-spacing-7 border-y-2 border-zinc-200'>
-          <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
+        <div className='container'>
+          <h2 className='f-heading-2 font-header font-semibold text-balance text-center py-spacing-7 border-y border-zinc-200'>
             <span className='text-gradient'>
-              Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares fundamentales que toda empresa necesita para crecer y consolidarse con éxito.
+              Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
+              fundamentales que toda empresa necesita para crecer y consolidarse con éxito.
             </span>
           </h2>
-          {/* <div className='cols-container pt-spacing-3'>
-            <div className='w-6-cols md:w-4-cols lg:w-6-cols'>
-              <h2 className='f-heading-1 font-serif md:pr-9 lg:pr-11'>
-                Lorem ipsum dolor sit
-              </h2>
-            </div>
-            <div className='w-6-cols md:w-4-cols lg:w-6-cols mt-4 md:mt-0'>
-              <p className='f-subhead-1'>
-                Lorem ipsun dolor sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor
-                sit amet, consectetur adipiscing elit. Nulla quam velit ipsun dolor sit amet.
-              </p>
-            </div>
-          </div> */}
-          {/* <div className='mt-spacing-9 space-y-spacing-7'>
-            {services.map((serviceItem, key) => (
-              <article className='cols-container items-center odd:flex-row-reverse' key={key}>
+          <div className=''>
+            {businesModeles.map((model, key) => (
+              <article className='border-b border-zinc-200' key={key}>
                 <div
                   className={cn(
-                    'w-6-cols md:w-4-cols lg:w-5-cols h-full',
-                    (key % 2 === 0) ? 'pl-12' : 'pr-12'
+                    'full-screen grid place-content-center',
+                    (key % 2 === 0) ? '' : ''
                   )}
                 >
-                  <h3 className='f-heading-1 font-header text-balance'>
-                    {serviceItem.title}
-                  </h3>
-                  <p className='mt-spacing-4 f-subhead-2 text-muted-foreground text-balance'>
-                    {serviceItem.description}
-                  </p>
-                </div>
-                <div className='w-6-cols md:w-4-cols lg:w-7-cols mt-gutter md:mt-0'>
-                  <Image
-                    src={serviceItem.image.src}
-                    alt={serviceItem.image.alt}
-                    width={serviceItem.image.width}
-                    height={serviceItem.image.height}
-                    sizes='(max-width: 744px) 100vw, (max-width: 1280px) 100vw, (max-width: 1440px) 100vw, 100vw'
-                    loading='lazy'
-                    className='w-full'
-                  />
+                  <model.Icon className='w-16 sm:w-24 xl:w-32 h-auto mx-auto' />
+                  <div className='max-w-4xl mx-auto text-center mt-spacing-5'>
+                    <h3 className='f-display-3 font-header font-semibold text-balance'>
+                      {model.name}
+                    </h3>
+                    <p className='mt-spacing-4 f-heading-2 text-balance'>
+                      {model.description}.
+                    </p>
+                  </div>
                 </div>
               </article>
             ))}
-          </div> */}
+          </div>
         </div>
       </section>
     </>

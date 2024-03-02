@@ -228,5 +228,9 @@
   .bg-gradient {
     @apply bg-gradient-to-tr to-[#7F735D] from-accent;
   }
+
+  .full-screen {
+    @apply h-[100dvh] min-h-[500xp] lg:min-h-[600px] max-h-[1320px] overflow-hidden;
+  }
 }
 
