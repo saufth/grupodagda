@@ -61,12 +61,25 @@ export default function IndexPage () {
       </section>
       <section id='nosotros'>
         <div className='container'>
-          <h2 className='f-heading-2 font-header font-semibold text-balance text-center py-spacing-7 border-y border-zinc-200'>
-            <span className='text-gradient'>
-              Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
-              fundamentales que toda empresa necesita para crecer y consolidarse con éxito.
-            </span>
-          </h2>
+          <div className='py-spacing-7 border-y border-zinc-200 flex flex-col items-center'>
+            <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
+              <span className='text-gradient'>
+                Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
+                fundamentales que toda empresa necesita para crecer y consolidarse con éxito.
+              </span>
+            </h2>
+            <Link
+              href='/nosotros'
+              target='_blank'
+              rel='noreferrer'
+              variant='ghost'
+              size='lg'
+              className='mt-spacing-5'
+            >
+              Acerca de nosotros
+              <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
+            </Link>
+          </div>
           <div className=''>
             {businesModeles.map((model, key) => (
               <article className='border-b border-zinc-200' key={key}>
