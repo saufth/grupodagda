@@ -9,9 +9,9 @@ import { siteConfig } from '@/config/site'
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
 const businessModelIcons = [
-  () => (<Icons.RehsokLogomark className={`w-8 sm:w-10 xl:w-[50px] ${iconsBaseStyle}`} />),
-  () => (<Icons.EmahLogomark className={`w-9 sm:w-11 xl:w-[52px] ${iconsBaseStyle}`} />),
-  () => (<Icons.KeyperspotLogomark className={`w-8 sm:w-10 xl:w-12 ${iconsBaseStyle}`} />),
+  () => (<Icons.RehsokLogomark className={`w-[34px] sm:w-10 xl:w-[50px] ${iconsBaseStyle}`} />),
+  () => (<Icons.EmahLogomark className={`w-[38px] sm:w-11 xl:w-[52px] ${iconsBaseStyle}`} />),
+  () => (<Icons.KeyperspotLogomark className={`w-[34px] sm:w-10 xl:w-12 ${iconsBaseStyle}`} />),
   () => (<Icons.TaxoLogomark className={`w-8 sm:w-10 xl:w-11 [&_*]:fill-foreground ${iconsBaseStyle}`} />),
   () => (<Icons.SerciusLogomark className={`w-8 sm:w-10 xl:w-11 ${iconsBaseStyle}`} />),
   () => (<Icons.TechgeeksLogomark className={`w-11 sm:w-[52px] xl:w-[58px] ${iconsBaseStyle}`} />)
