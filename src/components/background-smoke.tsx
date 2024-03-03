@@ -47,8 +47,8 @@ export default function BackgroundSmoke ({ children, className, ref, ...props }:
       {children}
       <div className='w-full h-screen fixed top-0 -z-10 overflow-hidden' ref={containerRef}>
         <Canvas className='opacity-60'>
-          <color attach='background' args={['#000000']} />
-          <directionalLight position={[-1, 3, 1]} color='#000000' intensity={1} />
+          <color attach='background' args={['#222222']} />
+          <directionalLight position={[-1, 3, 1]} color='#FFFFFF' intensity={1} />
           <perspectiveCamera position={[0, 0, 10]} fov={75} near={0.1} far={100} />
           <Smoke />
         </Canvas>

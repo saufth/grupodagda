@@ -6,7 +6,7 @@ export const slogan = siteConfig.description
 export const services: Omit<SiteConfig, 'mainNav'>[] = [
   {
     name: 'Rehsok',
-    description: 'Creamos posibilidades para empresas orientadas a desarrollar un legado de progreso generacional.',
+    description: 'Creamos posibilidades para empresas orientadas a desarrollar un legado de progreso generacional',
     url: 'https://rehsok.com',
     author: siteConfig.author
   },
@@ -18,7 +18,7 @@ export const services: Omit<SiteConfig, 'mainNav'>[] = [
   },
   {
     name: 'Keyperspot',
-    description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial.',
+    description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial',
     url: 'https://keyperspot.com',
     author: siteConfig.author
   },

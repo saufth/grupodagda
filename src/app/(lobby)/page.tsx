@@ -59,9 +59,9 @@ export default function IndexPage () {
           </div>
         </div>
       </section>
-      <section id='nosotros'>
+      <section id='nosotros' className='2xl:mt-spacing-7'>
         <div className='container'>
-          <div className='py-spacing-7 border-y border-zinc-200 flex flex-col items-center'>
+          <div className='py-spacing-9 border-y-2 border-zinc-200 flex flex-col items-center'>
             <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
@@ -82,7 +82,7 @@ export default function IndexPage () {
           </div>
           <div>
             {businesModeles.map((model, key) => (
-              <article className='border-b border-zinc-200' key={key}>
+              <article className='border-b border-zinc-400' key={key}>
                 <div className='grid place-content-center py-spacing-9'>
                   <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
                     <model.Icon
@@ -93,8 +93,10 @@ export default function IndexPage () {
                     />
                   </div>
                   <div className='max-w-4xl mx-auto text-center mt-spacing-5'>
-                    <h3 className='f-display-3 font-header font-semibold text-balance'>
-                      {model.name}
+                    <h3>
+                      <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
+                        {model.name}
+                      </span>
                     </h3>
                     <p className='mt-spacing-4 f-heading-2 text-balance'>
                       {model.description}.
