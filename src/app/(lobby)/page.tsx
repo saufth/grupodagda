@@ -61,7 +61,7 @@ export default function IndexPage () {
       </section>
       <section id='nosotros' className='2xl:mt-spacing-7'>
         <div className='container'>
-          <div className='py-spacing-9 border-y-2 border-zinc-200 flex flex-col items-center'>
+          <div className='py-spacing-9 border-y border-zinc-200 flex flex-col items-center'>
             <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
