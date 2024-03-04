@@ -1,13 +1,7 @@
-// import Image from 'next/image'
 import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
-// import { cn } from '@/lib/utils'
-// import { services } from '@/config/services'
-import { services } from '@/config/organization'
-// import { siteConfig } from '@/config/site'
+import { history, services, values } from '@/config/organization'
 import { cn } from '@/lib/utils'
-import { Link } from '@/components/ui/link'
-import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
 
@@ -64,8 +58,8 @@ export default function AboutPage () {
       </section>
       <section id='nosotros'>
         <div className='container'>
-          <div className='py-spacing-9 border-t border-zinc-400 flex flex-col items-center'>
-            <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
+          <div className='py-spacing-9 border-y border-zinc-400 grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
+            <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Aquí te presentamos los más importantes para nosotros, mismos que forman parte de nuestro
                 ADN y que son la clave en la generación de soluciones de valor para nuestros clientes
@@ -73,40 +67,47 @@ export default function AboutPage () {
             </h2>
           </div>
           <div>
-            {businesModeles.map((model, key) => (
+            {values.map((item, key) => (
               <article className='border-b border-zinc-400' key={key}>
-                <div className='grid place-content-center py-spacing-9'>
-                  <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
-                    <model.Icon
-                      className={cn(
-                        'w-12 sm:w-16 xl:w-20 h-auto',
-                        model.name === 'Sercius' && 'w-10 sm:w-12 xl:w-14'
-                      )}
-                    />
-                  </div>
-                  <div className='max-w-4xl mx-auto text-center mt-spacing-5'>
+                <div className='grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
+                  <div className='max-w-4xl mx-auto text-center'>
                     <h3>
-                      <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
-                        {model.name}
+                      <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
+                        {item.title}
                       </span>
                     </h3>
-                    <p className='mt-spacing-4 f-heading-2 text-balance'>
-                      {model.description}
-                    </p>
+                    {typeof item.description === 'string'
+                      ? (
+                        <p className='mt-spacing-4 f-heading-3 text-balance'>
+                          {item.description}
+                        </p>
+                        )
+                      : item.description.map((paragraph, key) => (
+                        <div key={key} className='mt-spacing-4'>
+                          <p className='mt-spacing-4 f-heading-3 text-balance'>
+                            {paragraph}
+                          </p>
+                        </div>
+                      ))}
                   </div>
-                  <Link
-                    href={model.url}
-                    target='_blank'
-                    rel='noreferrer'
-                    variant='ghost'
-                    size='lg'
-                    className='mx-auto mt-spacing-6 flex items-center gap-spacing-2'
-                  >
-                    Visitar sitio
-                    <ArrowTopRightIcon className='w-auto h-4 lg:h-[18px]' />
-                  </Link>
                 </div>
               </article>
+            ))}
+          </div>
+        </div>
+      </section>
+      <section>
+        <div className='container grid place-content-center py-spacing-9 border-b border-zinc-400'>
+          <h2>
+            <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
+              Nuestra razón de ser
+            </span>
+          </h2>
+          <div>
+            {history.map((item, key) => (
+              <p key={key} className='mt-spacing-4 f-heading-3 text-balance'>
+                {item}
+              </p>
             ))}
           </div>
         </div>

@@ -64,7 +64,7 @@ export default function IndexPage () {
       <section>
         <div className='container'>
           <div className='border-y border-zinc-400 grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
-            <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
+            <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
                 fundamentales que toda empresa necesita para crecer y consolidarse con éxito
