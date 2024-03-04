@@ -4,7 +4,7 @@ import { Icons } from '@/components/icons'
 // import { cn } from '@/lib/utils'
 // import { services } from '@/config/services'
 import { services } from '@/config/organization'
-import { siteConfig } from '@/config/site'
+// import { siteConfig } from '@/config/site'
 import { cn } from '@/lib/utils'
 import { Link } from '@/components/ui/link'
 import { ArrowTopRightIcon } from '@radix-ui/react-icons'
@@ -25,7 +25,7 @@ const businesModeles = services.map((model, index) => ({
   Icon: (businessModelIcons[index] || (() => <Icons.ImageOff className='w-9 h-auto' />))
 }))
 
-export default function IndexPage () {
+export default function AboutPage () {
   return (
     <>
       <section className='pt-spacing-7 pb-spacing-9'>
@@ -35,9 +35,10 @@ export default function IndexPage () {
               <NextLink href='/'>
                 <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
               </NextLink>
-              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6'>
+              <h1 className='f-heading-1 font-header font-extrabold text-balance mt-spacing-6'>
                 <span className='text-gradient'>
-                  {siteConfig.description}
+                  El éxito a corto, mediano y largo plazo de cualquier empresa,
+                  no dependede un solo aspecto, sino de la sincronización de muchos
                 </span>
               </h1>
             </div>
@@ -61,29 +62,20 @@ export default function IndexPage () {
           </div>
         </div>
       </section>
-      <section>
+      <section id='nosotros'>
         <div className='container'>
-          <div className='border-y border-zinc-400 grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
+          <div className='py-spacing-9 border-t border-zinc-400 flex flex-col items-center'>
             <h2 className='f-heading-2 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
-                Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
-                fundamentales que toda empresa necesita para crecer y consolidarse con éxito
+                Aquí te presentamos los más importantes para nosotros, mismos que forman parte de nuestro
+                ADN y que son la clave en la generación de soluciones de valor para nuestros clientes
               </span>
             </h2>
-            <Link
-              href='/nosotros'
-              variant='ghost'
-              size='lg'
-              className='mt-spacing-5 mx-auto'
-            >
-              Acerca de nosotros
-              <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
-            </Link>
           </div>
           <div>
             {businesModeles.map((model, key) => (
               <article className='border-b border-zinc-400' key={key}>
-                <div className='grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
+                <div className='grid place-content-center py-spacing-9'>
                   <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
                     <model.Icon
                       className={cn(
