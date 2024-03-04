@@ -31,8 +31,8 @@ export default function AboutPage () {
               </NextLink>
               <h1 className='f-heading-1 font-header font-extrabold text-balance mt-spacing-6'>
                 <span className='text-gradient'>
-                  El éxito a corto, mediano y largo plazo de cualquier empresa,
-                  no dependede un solo aspecto, sino de la sincronización de muchos
+                  El éxito a corto, mediano y largo plazo de cualquier empresa, no
+                  depende de un solo aspecto, sino de la sincronización de muchos
                 </span>
               </h1>
             </div>
