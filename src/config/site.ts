@@ -8,20 +8,8 @@ export const author: Author = {
 
 export const siteNav: MainNavItem[] = [
   {
-    title: 'Nuestras soluciones',
-    href: '/soluciones'
-  },
-  {
     title: 'Acerca de nosotros',
     href: '/nosotros'
-  },
-  {
-    title: 'Nuestra razón de ser',
-    href: '/razon-de-ser'
-  },
-  {
-    title: 'Pongamonos en contacto',
-    href: '/contacto'
   }
 ]
 
@@ -35,7 +23,7 @@ export const siteConfig: SiteConfig = {
   author,
   mainNav: [
     {
-      title: 'Página de inicio',
+      title: 'Nuestras soluciones',
       href: '/'
     },
     ...siteNav
