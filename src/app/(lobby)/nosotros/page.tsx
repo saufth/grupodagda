@@ -59,7 +59,7 @@ export default function AboutPage () {
       </section>
       <section className='mt-spacing-9'>
         <div className='container'>
-          <div className='text-center'>
+          <div className='max-w-5xl mx-auto text-center'>
             <h2 className='f-display-3 font-semibold font-header'>
               <span className='text-gradient'>
                 Nuestra cultura
