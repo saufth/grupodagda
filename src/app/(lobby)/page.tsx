@@ -85,7 +85,7 @@ export default function IndexPage () {
                     <model.Icon className='w-2/3 sm:w-2/3 xl:w-1/2 h-auto' />
                   </div>
                 </div>
-                <div className={cn('w-full lg:w-1/2-cols mt-spacing-4 lg:mt-0', key % 2 === 0 ? '2xl:pl-8' : '2xl:pr-8')}>
+                <div className={cn('w-full lg:w-1/2-cols mt-spacing-5 lg:mt-0', key % 2 === 0 ? '2xl:pl-8' : '2xl:pr-8')}>
                   <div className='text-center lg:text-left'>
                     <h3>
                       <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
