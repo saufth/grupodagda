@@ -1,6 +1,7 @@
+import NextImage from 'next/image'
 import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
-import { history, services, values } from '@/config/organization'
+import { history, services, culture } from '@/config/organization'
 import { cn } from '@/lib/utils'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
@@ -29,12 +30,12 @@ export default function AboutPage () {
               <NextLink href='/'>
                 <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
               </NextLink>
-              <h1 className='f-heading-1 font-header font-extrabold text-balance mt-spacing-6'>
+              <h1 className='sr-only'>Acerca de nosotros</h1>
+              <p className='f-display-1 font-header font-extrabold text-balance mt-spacing-6 uppercase'>
                 <span className='text-gradient'>
-                  El éxito a corto, mediano y largo plazo de cualquier empresa, no
-                  depende de un solo aspecto, sino de la sincronización de muchos
+                  {culture.title}
                 </span>
-              </h1>
+              </p>
             </div>
             <div className='mt-spacing-6'>
               <ul className='max-w-80 sm:max-w-full mx-auto sm:mx-0 flex flex-wrap justify-center gap-gutter'>
@@ -58,38 +59,59 @@ export default function AboutPage () {
       </section>
       <section id='nosotros'>
         <div className='container'>
-          <div className='py-spacing-9 border-y border-zinc-400 grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
-            <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>
+          <div className='text-center border-y border-zinc-400 py-spacing-7'>
+            <h2 className='f-display-3 font-semibold font-header'>
               <span className='text-gradient'>
-                Aquí te presentamos los más importantes para nosotros, mismos que forman parte de nuestro
-                ADN y que son la clave en la generación de soluciones de valor para nuestros clientes
+                Nuestra cultura
               </span>
             </h2>
+            {typeof culture.description === 'string'
+              ? (
+                <p className='f-subhead-1 font-header font-semibold text-balancer'>
+                  {culture.description}
+                </p>
+                )
+              : (
+                <div className='mt-spacing-4 text-center space-y-spacing-3'>
+                  {culture.description?.map((paragraph, key) => (
+                    <p key={key} className='f-subhead-1 font-header font-semibold text-balance'>
+                      {paragraph}
+                    </p>
+                  ))}
+                </div>
+                )}
           </div>
           <div>
-            {values.map((item, key) => (
-              <article className='border-b border-zinc-400' key={key}>
-                <div className='grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
-                  <div className='max-w-4xl mx-auto text-center'>
-                    <h3>
-                      <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
-                        {item.title}
-                      </span>
-                    </h3>
+            {culture.items.map((item, key) => (
+              <article className='lg:cols-container lg:even:flex-row-reverse mt-spacing-7' key={key}>
+                <div className={cn('lg:w-1/2-cols flex flex-col justify-center', key % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8')}>
+                  <h3 className='f-heading-2 font-header font-semibold text-balance text-center lg:text-left'>
+                    <span className='text-gradient'>
+                      {item.title}
+                    </span>
+                  </h3>
+                  <div className='mt-spacing-4 space-y-spacing-3 text-center lg:text-left'>
                     {typeof item.description === 'string'
                       ? (
-                        <p className='mt-spacing-4 f-heading-3 text-balance'>
+                        <p className='f-subhead-2 text-balance'>
                           {item.description}
                         </p>
                         )
-                      : item.description.map((paragraph, key) => (
-                        <div key={key} className='mt-spacing-4'>
-                          <p className='mt-spacing-4 f-heading-3 text-balance'>
-                            {paragraph}
-                          </p>
-                        </div>
+                      : item.description?.map((paragraph, key) => (
+                        <p key={key} className='f-subhead-2 text-balance'>
+                          {paragraph}
+                        </p>
                       ))}
                   </div>
+                </div>
+                <div className='lg:w-1/2-cols h-fit my-auto mt-spacing-5 lg:mt-0'>
+                  {item.image && (
+                    <NextImage
+                      className='w-full h-auto aspect-video rounded-xl'
+                      loading='lazy'
+                      {...item.image}
+                    />
+                  )}
                 </div>
               </article>
             ))}
@@ -100,11 +122,11 @@ export default function AboutPage () {
         <div className='container grid place-content-center py-spacing-9 border-b border-zinc-400'>
           <h2>
             <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
-              Nuestra razón de ser
+              {history.title}
             </span>
           </h2>
           <div>
-            {history.map((item, key) => (
+            {history.items.map((item, key) => (
               <p key={key} className='mt-spacing-4 f-heading-3 text-balance'>
                 {item}
               </p>
