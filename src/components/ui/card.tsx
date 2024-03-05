@@ -11,7 +11,7 @@ const Card = React.forwardRef<
   <Comp
     ref={ref}
     className={cn(
-      'bg-card shadow border space-y-10 sm:space-y-12 py-6 px-8 sm:p-8',
+      'bg-card shadow border p-gutter',
       className
     )}
     {...props}
@@ -25,7 +25,7 @@ const CardHeader = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     ref={ref}
-    className={cn('w-full space-y-2', className)}
+    className={cn('w-full space-y-spacing-4', className)}
     {...props}
   />
 ))
@@ -34,7 +34,7 @@ CardHeader.displayName = 'CardHeader'
 type CardProps = React.ComponentProps<typeof Card>
 
 interface CardDataProps extends CardProps {
-  card: ItemOptional
+  item: ItemOptional
 }
 
 const CardTitle = React.forwardRef<

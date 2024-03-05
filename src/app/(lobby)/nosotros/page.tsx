@@ -3,6 +3,7 @@ import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
 import { history, services, culture } from '@/config/organization'
 import { cn } from '@/lib/utils'
+import { ArticleCard } from '@/components/cards/article-card'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-transform duration-300'
 
@@ -30,12 +31,12 @@ export default function AboutPage () {
               <NextLink href='/'>
                 <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
               </NextLink>
-              <h1 className='sr-only'>Acerca de nosotros</h1>
-              <p className='f-display-1 font-header font-extrabold text-balance mt-spacing-6 uppercase'>
+              <h1 className='sr-only'>{culture.title}</h1>
+              <div className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6'>
                 <span className='text-gradient'>
                   {culture.title}
                 </span>
-              </p>
+              </div>
             </div>
             <div className='mt-spacing-6'>
               <ul className='max-w-80 sm:max-w-full mx-auto sm:mx-0 flex flex-wrap justify-center gap-gutter'>
@@ -83,37 +84,38 @@ export default function AboutPage () {
           </div>
           <div>
             {culture.items.map((item, key) => (
-              <article className='lg:cols-container lg:even:flex-row-reverse mt-spacing-9' key={key}>
-                <div className={cn('lg:w-1/2-cols flex flex-col justify-center', key % 2 === 0 ? '2xl:pr-8' : '2xl:pl-8')}>
-                  <h3 className='f-heading-2 font-header font-semibold text-balance text-center lg:text-left'>
-                    <span className='text-gradient'>
-                      {item.title}
-                    </span>
-                  </h3>
-                  <div className='mt-spacing-4 space-y-spacing-3 text-center lg:text-left'>
-                    {typeof item.description === 'string'
-                      ? (
-                        <p className='f-subhead-2 text-balance'>
-                          {item.description}
-                        </p>
-                        )
-                      : item.description?.map((paragraph, key) => (
-                        <p key={key} className='f-subhead-2 text-balance'>
-                          {paragraph}
-                        </p>
-                      ))}
-                  </div>
-                </div>
-                <div className='lg:w-1/2-cols mt-spacing-5 lg:mt-0 lg:flex lg:items-center'>
-                  {item.image && (
-                    <NextImage
-                      className='w-full h-auto aspect-video rounded-xl'
-                      loading='lazy'
-                      {...item.image}
-                    />
-                  )}
-                </div>
-              </article>
+              <ArticleCard className='mt-spacing-9 lg:even:flex-row-reverse' headerClassName={key % 2 === 0 ? '2xl:pr-8' : '2xl:pl-8'} item={item} key={key} />
+              // <article className='lg:cols-container lg:even:flex-row-reverse mt-spacing-9' key={key}>
+              //   <div className={cn('lg:w-1/2-cols flex flex-col justify-center', key % 2 === 0 ? '2xl:pr-8' : '2xl:pl-8')}>
+              //     <h3 className='f-heading-2 font-header font-semibold text-balance text-center lg:text-left'>
+              //       <span className='text-gradient'>
+              //         {item.title}
+              //       </span>
+              //     </h3>
+              //     <div className='mt-spacing-4 space-y-spacing-3 text-center lg:text-left'>
+              //       {typeof item.description === 'string'
+              //         ? (
+              //           <p className='f-subhead-2 text-balance'>
+              //             {item.description}
+              //           </p>
+              //           )
+              //         : item.description?.map((paragraph, key) => (
+              //           <p key={key} className='f-subhead-2 text-balance'>
+              //             {paragraph}
+              //           </p>
+              //         ))}
+              //     </div>
+              //   </div>
+              //   <div className='lg:w-1/2-cols mt-spacing-5 lg:mt-0 lg:flex lg:items-center'>
+              //     {item.image && (
+              //       <NextImage
+              //         className='w-full h-auto aspect-video rounded-xl'
+              //         loading='lazy'
+              //         {...item.image}
+              //       />
+              //     )}
+              //   </div>
+              // </article>
             ))}
           </div>
         </div>

@@ -63,7 +63,7 @@ export default function IndexPage () {
       </section>
       <section>
         <div className='container'>
-          <div className='border-y border-zinc-400 grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
+          <div className='grid place-content-center'>
             <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
@@ -82,17 +82,14 @@ export default function IndexPage () {
           </div>
           <div>
             {businesModeles.map((model, key) => (
-              <article className='border-b border-zinc-400' key={key}>
-                <div className='grid place-content-center h-3xl md:h-5xl xl:h-4xl 2xl:h-5xl'>
-                  <div className='w-20 sm:w-24 xl:w-28 h-20 sm:h-24 xl:h-28 mx-auto grid place-content-center bg-accent/10 border rounded-full'>
-                    <model.Icon
-                      className={cn(
-                        'w-12 sm:w-16 xl:w-20 h-auto',
-                        model.name === 'Sercius' && 'w-10 sm:w-12 xl:w-14'
-                      )}
-                    />
+              <article key={key} className='lg:cols-container lg:even:flex-row-reverse lg:items-center py-spacing-9'>
+                <div className={cn('lg:w-1/2-cols flex justify-center', key % 2 !== 0 && 'lg:justify-end')}>
+                  <div className='w-32 sm:w-40 lg:w-11/12 aspect-square bg-primary/10 border rounded-full flex justify-center items-center'>
+                    <model.Icon className='w-2/3 sm:w-2/3 xl:w-1/2 h-auto' />
                   </div>
-                  <div className='max-w-4xl mx-auto text-center mt-spacing-5'>
+                </div>
+                <div className={cn('w-full lg:w-1/2-cols mt-spacing-6 lg:mt-0', key % 2 === 0 ? '2xl:pl-8' : '2xl:pr-8')}>
+                  <div className='text-center lg:text-left'>
                     <h3>
                       <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
                         {model.name}
@@ -108,7 +105,7 @@ export default function IndexPage () {
                     rel='noreferrer'
                     variant='ghost'
                     size='lg'
-                    className='mx-auto mt-spacing-6 flex items-center gap-spacing-2'
+                    className='mt-spacing-6 flex items-center gap-spacing-2 mx-auto lg:mx-0'
                   >
                     Visitar sitio
                     <ArrowTopRightIcon className='w-auto h-4 lg:h-[18px]' />

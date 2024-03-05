@@ -43,7 +43,7 @@ export const services: Omit<SiteConfig, 'mainNav'>[] = [
 ]
 
 export const culture: Section = {
-  title: 'Acerca de nostros',
+  title: 'Lorem ipsum dolor sit',
   description: ['El éxito a corto, mediano y largo plazo de cualquier empresa, no depende de un solo aspecto, sino de la sincronización de muchos.',
     'Aquí te presentamos los más importantes para nosotros, mismos que forman parte de nuestro ADN y que son la clave en la generación de soluciones de valor para nuestros clientes'
   ],
