@@ -1,13 +1,10 @@
-// import Image from 'next/image'
 import NextLink from 'next/link'
+import { ArrowTopRightIcon } from '@radix-ui/react-icons'
+import { Link } from '@/components/ui/link'
 import { Icons } from '@/components/icons'
-// import { cn } from '@/lib/utils'
-// import { services } from '@/config/services'
+import { cn } from '@/lib/utils'
 import { services } from '@/config/organization'
 import { siteConfig } from '@/config/site'
-import { cn } from '@/lib/utils'
-import { Link } from '@/components/ui/link'
-import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
 const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-transform duration-300'
 
@@ -105,7 +102,7 @@ export default function IndexPage () {
                     rel='noreferrer'
                     variant='ghost'
                     size='lg'
-                    className='mt-spacing-6 flex items-center gap-spacing-2 mx-auto lg:mx-0'
+                    className='mt-spacing-5 flex items-center gap-spacing-2 mx-auto lg:mx-0'
                   >
                     Visitar sitio
                     <ArrowTopRightIcon className='w-auto h-4 lg:h-[18px]' />

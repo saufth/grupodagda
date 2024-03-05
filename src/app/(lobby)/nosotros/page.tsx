@@ -1,4 +1,3 @@
-import NextImage from 'next/image'
 import NextLink from 'next/link'
 import { Icons } from '@/components/icons'
 import { history, services, culture } from '@/config/organization'
