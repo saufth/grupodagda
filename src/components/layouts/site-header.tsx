@@ -1,101 +1,92 @@
 'use client'
 import React from 'react'
-import NextLink from 'next/link'
-import { ArrowRightIcon } from '@radix-ui/react-icons'
-import { Icons } from '@/components/icons'
 import { Link } from '@/components/ui/link'
-import { useScroll, useMotionValueEvent } from 'framer-motion'
 import { cn } from '@/lib/utils'
-import { contactEmail, siteConfig, siteNav } from '@/config/site'
+import { contactEmail, siteConfig } from '@/config/site'
+import { services } from '@/config/organization'
 
 export default function SiteHeader () {
-  const [isOnTop, setIsOnTop] = React.useState(true)
   const [isMenuOpen, setIsMenuOpen] = React.useState(false)
-  const { scrollY } = useScroll()
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen)
-  const closeMenu = () => setIsMenuOpen(false)
-
-  useMotionValueEvent(scrollY, 'change', (latestScrollY) => {
-    setIsOnTop(latestScrollY < 1)
-  })
 
   return (
     <>
+      <button
+        className='w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 fixed right-gutter top-gutter z-40 transition-colors duration-300 bg-accent/10 backdrop-filter backdrop-blur-md grid place-content-center border rounded-full'
+        onClick={toggleMenu}
+      >
+        <div className='flex'>
+          <div className='w-[18px] sm:w-5 lg:w-[25px] h-3.5 sm:h-4 lg:h-[22px] relative'>
+            <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-transform duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg]')} />
+            <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-transform duration-500', isMenuOpen && 'opacity-0')} />
+            <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-transform duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg]')} />
+            <span className='sr-only'>Toggle menu</span>
+          </div>
+        </div>
+      </button>
       <header
         className={cn(
-          'w-full absolute top-0 left-0 z-40 transition-colors duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
-          isOnTop && 'backdrop-filter-none',
-          isMenuOpen && 'backdrop-filter-none'
-        )}
-      >
-        <nav className='relative' aria-label={`${siteConfig.name} Directory`}>
-          <div className='full-container px-gutter'>
-            <div
-              className='flex justify-between items-center 2xl:pt-20'
-            >
-              <div className='xl:w-1/4' />
-              <NextLink href='/' onClick={closeMenu}>
-                <Icons.Logotype className='w-auto h-14 lg:h-[72px] xl:h-24 fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
-                <span className='sr-only'>{siteConfig.name} home</span>
-              </NextLink>
-              <div className='xl:w-1/4 flex justify-end'>
-                <button className='w-6 lg:w-[25px] h-[18px] lg:h-[22px] relative mr-2 2xl:mt-0 [&>span]:shadow' onClick={toggleMenu}>
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-[transform,background-color] duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-[transform,background-color] duration-500', isMenuOpen && 'opacity-0')} />
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-[transform,background-color] duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
-                  <span className='sr-only'>Toggle menu</span>
-                </button>
-              </div>
-              {/* <div className='h-full hidden xl:flex items-center gap-x-5'>
-                <ul className='h-full flex items-center gap-x-5'>
-                  {siteNav.map((navItem, key) => (
-                    <li key={key} className='last:hidden'>
-                      <Link href={navItem.href} className='xl:text-lg font-medium' variant='link'>
-                        {navItem.title}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-              </div> */}
-              {/* <div className='xl:w-1/4 h-full flex items-center justify-end'>
-                <CallToAction variant='outline' className='hidden xl:flex' />
-              </div> */}
-            </div>
-          </div>
-        </nav>
-      </header>
-      <div
-        className={cn(
-          'w-full h-0 bg-gradient-to-tl from-black/95 via-black/95 to-primary/95 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
+          'w-full h-0 bg-gradient-to-tl from-black/80 via-black/60 to-primary/60 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
           isMenuOpen && 'h-[100dvh]'
         )}
       >
-        <ul className='container mt-spacing-7'>
-          {siteNav.map((navItem, key) => (
-            <li key={key} className='border-b first:border-t-0'>
-              <Link
-                className='flex justify-between text-base text-secondary-foreground w-full px-0 py-2'
-                href={navItem.href}
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {navItem.title}
-                <ArrowRightIcon className='w-4 h-4 [&_*]:fill-secondary-foreground' />
-              </Link>
-            </li>
-          ))}
-        </ul>
-        <div className='container pb-8 flex justify-between items-end'>
-          <div>
-            <div className='text-sm sm:text-base text-secondary-foreground/80'>
-              Correo electrónico
+        <div className='container'>
+          <div className='lg:cols-container flex-col md:flex-row gap-y-7 md:gap-y-0 mt-spacing-7 lg:mt-spacing-9 space-y-spacing-6 lg:space-y-0'>
+            <div className='lg:w-1/3-cols'>
+              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+                {siteConfig.name}
+              </div>
+              <ul className='space-y-spacing-3 mt-spacing-3'>
+                {services.map((item, key) => (
+                  <li key={key}>
+                    <Link
+                      href={item.url}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='text-xl lg:text-2xl text-white'
+                    >
+                      {item.name}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
-            <Link className='px-0 text-lg text-secondary-foreground' href={`mailto:${contactEmail}`} onClick={() => setIsMenuOpen(false)}>
-              {contactEmail}
-            </Link>
+            <div className='lg:w-1/3-cols'>
+              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+                Directorio
+              </div>
+              <ul className='space-y-spacing-3 mt-spacing-3'>
+                {siteConfig.mainNav.map((item, key) => (
+                  <li key={key}>
+                    <Link
+                      href={item.href}
+                      target='_blank'
+                      rel='noreferrer'
+                      className='text-xl lg:text-2xl text-white'
+                    >
+                      {item.title}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            <div className='lg:w-1/3-cols'>
+              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+                Correo electrónico
+              </div>
+              <Link
+                href={`mailto:${contactEmail}`}
+                target='_blank'
+                rel='noreferrer'
+                className='text-xl lg:text-2xl text-white mt-spacing-3'
+              >
+                {contactEmail}
+              </Link>
+            </div>
           </div>
         </div>
-      </div>
+      </header>
     </>
   )
 }

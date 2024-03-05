@@ -8,7 +8,7 @@ export const author: Author = {
 
 export const siteNav: MainNavItem[] = [
   {
-    title: 'Acerca de nosotros',
+    title: 'Nosotros',
     href: '/nosotros'
   }
 ]
@@ -23,7 +23,7 @@ export const siteConfig: SiteConfig = {
   author,
   mainNav: [
     {
-      title: 'Nuestras soluciones',
+      title: 'Inicio',
       href: '/'
     },
     ...siteNav

@@ -3,7 +3,6 @@ import { services } from '@/config/organization'
 import { contactEmail, siteConfig } from '@/config/site'
 
 export default function SiteFooter () {
-  /* bg-gradient-to-tr from-muted via-muted to-muted/95 */
   return (
     <footer className='py-spacing-7'>
       <div className='container pt-spacing-7 flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between border-t border-zinc-400'>
@@ -14,7 +13,12 @@ export default function SiteFooter () {
           <ul className='space-y-spacing-2 mt-spacing-3'>
             {services.map((item, key) => (
               <li key={key}>
-                <Link href={item.url} className='text-base xl:text-lg font-light text-white'>
+                <Link
+                  href={item.url}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-base xl:text-lg font-light text-white'
+                >
                   {item.name}
                 </Link>
               </li>
@@ -28,7 +32,12 @@ export default function SiteFooter () {
           <ul className='space-y-spacing-2 mt-spacing-3'>
             {siteConfig.mainNav.map((item, key) => (
               <li key={key}>
-                <Link href={item.href} className='text-base xl:text-lg font-light text-white'>
+                <Link
+                  href={item.href}
+                  target='_blank'
+                  rel='noreferrer'
+                  className='text-base xl:text-lg font-light text-white'
+                >
                   {item.title}
                 </Link>
               </li>
@@ -39,7 +48,12 @@ export default function SiteFooter () {
           <div className='text-base sm:text-lg font-medium text-muted-foreground'>
             Correo electrónico
           </div>
-          <Link className='text-base xl:text-lg font-light text-white' href={`mailto:${contactEmail}`}>
+          <Link
+            href={`mailto:${contactEmail}`}
+            target='_blank'
+            rel='noreferrer'
+            className='text-base xl:text-lg font-light text-white'
+          >
             {contactEmail}
           </Link>
         </div>
