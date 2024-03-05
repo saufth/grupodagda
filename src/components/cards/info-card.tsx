@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
-export function InfoCard ({ card, className, ...props }: CardDataProps) {
+export function InfoCard ({ item, className, ...props }: CardDataProps) {
   return (
     <Card
       as='article'
@@ -20,19 +20,19 @@ export function InfoCard ({ card, className, ...props }: CardDataProps) {
       <div className='w-full h-full dark:bg-gradient-to-t dark:from-zinc-950 dark:to-muted py-10 px-8 sm:py-12'>
         <CardHeader>
           <h3 className='f-subhead-2 font-header'>
-            {card.title}
+            {item.title}
           </h3>
         </CardHeader>
         <CardContent className='mt-spacing-2'>
-          {typeof card.description === 'string'
+          {typeof item.description === 'string'
             ? (
               <p className='f-body-1 text-muted-foreground text-balance'>
-                {card.description}
+                {item.description}
               </p>
               )
             : (
               <>
-                {card.description?.map((description, key) => (
+                {item.description?.map((description, key) => (
                   <p className='f-body-1 text-muted-foreground mt-spacing-2 text-balance' key={key}>
                     {description}
                   </p>

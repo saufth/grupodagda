@@ -7,7 +7,7 @@ import {
 } from '@/components/ui/card'
 import { cn } from '@/lib/utils'
 
-export function SimpleCard ({ card, className, ...props }: CardDataProps) {
+export function SimpleCard ({ item, className, ...props }: CardDataProps) {
   return (
     <Card
       as='article'
@@ -20,12 +20,12 @@ export function SimpleCard ({ card, className, ...props }: CardDataProps) {
       <div className='w-full h-full'>
         <CardHeader>
           <h3 className='f-subhead-2 font-semibold'>
-            {card.title}
+            {item.title}
           </h3>
         </CardHeader>
         <CardContent className='mt-spacing-2'>
           <p className='f-body-1 text-muted-foreground'>
-            {card.description}
+            {item.description}
           </p>
         </CardContent>
       </div>
