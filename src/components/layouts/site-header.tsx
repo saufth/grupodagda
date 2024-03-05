@@ -24,7 +24,7 @@ export default function SiteHeader () {
     <>
       <header
         className={cn(
-          'w-full absolute top-0 left-0 z-40 transition-all duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
+          'w-full absolute top-0 left-0 z-40 transition-colors duration-300 bg-black/0 backdrop-filter backdrop-blur-md',
           isOnTop && 'backdrop-filter-none',
           isMenuOpen && 'backdrop-filter-none'
         )}
@@ -32,10 +32,7 @@ export default function SiteHeader () {
         <nav className='relative' aria-label={`${siteConfig.name} Directory`}>
           <div className='full-container px-gutter'>
             <div
-              className={cn(
-                'flex justify-between items-center transition-all duration-300 2xl:pt-20',
-                isOnTop && ''
-              )}
+              className='flex justify-between items-center 2xl:pt-20'
             >
               <div className='xl:w-1/4' />
               <NextLink href='/' onClick={closeMenu}>
@@ -44,9 +41,9 @@ export default function SiteHeader () {
               </NextLink>
               <div className='xl:w-1/4 flex justify-end'>
                 <button className='w-6 lg:w-[25px] h-[18px] lg:h-[22px] relative mr-2 2xl:mt-0 [&>span]:shadow' onClick={toggleMenu}>
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-all duration-500', isMenuOpen && 'opacity-0')} />
-                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-all duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute top-0 right-0 transition-[transform,background-color] duration-500', isMenuOpen && 'inset-0 m-auto rotate-[135deg] bg-accent')} />
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute inset-0 m-auto transition-[transform,background-color] duration-500', isMenuOpen && 'opacity-0')} />
+                  <span className={cn('w-full h-0.5 bg-foreground/80 absolute bottom-0 right-0 transition-[transform,background-color] duration-500', isMenuOpen && 'inset-0 m-auto -rotate-[135deg] bg-accent')} />
                   <span className='sr-only'>Toggle menu</span>
                 </button>
               </div>

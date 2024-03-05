@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils'
 import { Link } from '@/components/ui/link'
 import { ArrowTopRightIcon } from '@radix-ui/react-icons'
 
-const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
+const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-transform duration-300'
 
 const businessModelIcons = [
   ({ className } : { className?: string }) => (<Icons.RehsokLogomark className={cn('w-[34px] sm:w-10 xl:w-[50px] fill-rehsok', iconsBaseStyle, className)} />),

@@ -4,7 +4,7 @@ import { Icons } from '@/components/icons'
 import { history, services, culture } from '@/config/organization'
 import { cn } from '@/lib/utils'
 
-const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-all duration-300'
+const iconsBaseStyle = 'h-auto group-hover:scale-110 transition-transform duration-300'
 
 const businessModelIcons = [
   ({ className } : { className?: string }) => (<Icons.RehsokLogomark className={cn('w-[34px] sm:w-10 xl:w-[50px] fill-rehsok', iconsBaseStyle, className)} />),
@@ -59,7 +59,7 @@ export default function AboutPage () {
       </section>
       <section id='nosotros'>
         <div className='container'>
-          <div className='text-center border-y border-zinc-400 py-spacing-7'>
+          <div className='text-center'>
             <h2 className='f-display-3 font-semibold font-header'>
               <span className='text-gradient'>
                 Nuestra cultura
@@ -83,8 +83,8 @@ export default function AboutPage () {
           </div>
           <div>
             {culture.items.map((item, key) => (
-              <article className='lg:cols-container lg:even:flex-row-reverse mt-spacing-7' key={key}>
-                <div className={cn('lg:w-1/2-cols flex flex-col justify-center', key % 2 === 0 ? 'lg:pr-8' : 'lg:pl-8')}>
+              <article className='lg:cols-container lg:even:flex-row-reverse mt-spacing-9' key={key}>
+                <div className={cn('lg:w-1/2-cols flex flex-col justify-center', key % 2 === 0 ? '2xl:pr-8' : '2xl:pl-8')}>
                   <h3 className='f-heading-2 font-header font-semibold text-balance text-center lg:text-left'>
                     <span className='text-gradient'>
                       {item.title}
@@ -104,7 +104,7 @@ export default function AboutPage () {
                       ))}
                   </div>
                 </div>
-                <div className='lg:w-1/2-cols h-fit my-auto mt-spacing-5 lg:mt-0'>
+                <div className='lg:w-1/2-cols mt-spacing-5 lg:mt-0 lg:flex lg:items-center'>
                   {item.image && (
                     <NextImage
                       className='w-full h-auto aspect-video rounded-xl'
@@ -119,7 +119,7 @@ export default function AboutPage () {
         </div>
       </section>
       <section>
-        <div className='container grid place-content-center py-spacing-9 border-b border-zinc-400'>
+        <div className='container grid place-content-center mt-spacing-9'>
           <h2>
             <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
               {history.title}

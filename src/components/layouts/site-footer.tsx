@@ -5,8 +5,8 @@ import { contactEmail, siteConfig } from '@/config/site'
 export default function SiteFooter () {
   /* bg-gradient-to-tr from-muted via-muted to-muted/95 */
   return (
-    <footer className='pt-spacing-7 pb-spacing-8'>
-      <div className='container flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between'>
+    <footer className='py-spacing-7'>
+      <div className='container pt-spacing-7 flex flex-col md:flex-row gap-y-7 md:gap-y-0 md:justify-between border-t border-zinc-400'>
         <div>
           <div className='text-base sm:text-lg font-medium text-muted-foreground'>
             {siteConfig.name}
