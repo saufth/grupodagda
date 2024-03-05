@@ -30,15 +30,15 @@ export default function IndexPage () {
           <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
               <NextLink href='/'>
-                <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300]' />
+                <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300] [animation-delay:500ms]' />
               </NextLink>
-              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6'>
+              <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6 opacity-0 animate-show [animation-delay:750ms]'>
                 <span className='text-gradient'>
                   {siteConfig.description}
                 </span>
               </h1>
             </div>
-            <div className='mt-spacing-6'>
+            <div className='mt-spacing-6 opacity-0 animate-show [animation-delay:1s]'>
               <ul className='max-w-80 sm:max-w-full mx-auto sm:mx-0 flex flex-wrap justify-center gap-gutter'>
                 {businesModeles.map((model, key) => (
                   <li key={key}>
@@ -58,7 +58,7 @@ export default function IndexPage () {
           </div>
         </div>
       </section>
-      <section>
+      <section className='mt-spacing-7'>
         <div className='container'>
           <div className='grid place-content-center'>
             <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>

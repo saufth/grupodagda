@@ -137,7 +137,8 @@ const config: Config = {
         sm: 'calc(var(--radius) - 4px)'
       },
       animation: {
-        draw: 'draw 2s ease-in forwards'
+        draw: 'draw 2s ease-in forwards',
+        show: 'show 1s ease-in forwards'
       },
       keyframes: {
         draw: {
@@ -156,6 +157,14 @@ const config: Config = {
             'fill-opacity': '100%',
             'stroke-dashoffset': '0',
             'stroke-width': '0'
+          }
+        },
+        show: {
+          '0%': {
+            opacity: '0'
+          },
+          '100%': {
+            opacity: '100%'
           }
         }
       }
