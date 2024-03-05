@@ -12,31 +12,31 @@ export const services: Omit<SiteConfig, 'mainNav'>[] = [
   },
   {
     name: 'Emah',
-    description: 'Impulsamos a emprendedores y empresarios a consolidar su modelo de negocio, ofreciendo productos intangibles de alto valor agregado para sus clientes',
+    description: 'Impulsamos empresas a desarrollar propuestas de alto valor agregado para sus clientes a fin de crear una diferenciación real en el mercado',
     url: 'https://emah.mx',
     author: siteConfig.author
   },
   {
     name: 'Keyperspot',
-    description: 'Impulsamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial',
+    description: 'Potenciamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial',
     url: 'https://keyperspot.com',
     author: siteConfig.author
   },
   {
     name: 'Taxo Contable',
-    description: 'Negocios, contabilidad y finanzas',
+    description: 'Ordenamos la información de las empresas, generando valor en las áreas contables, fiscales y estrategias de modelos de negocios',
     url: 'https://taxocontable.com',
     author: siteConfig.author
   },
   {
     name: 'Sercius',
-    description: 'Seguridad jurídica empresarial',
+    description: 'Ayudamos a las empresas a cumplir con las leyes y regulaciones, mitigar riesgos y resolver asuntos legales que puedan surgir en el curso de sus operaciones comerciales',
     url: 'https://sercius.mx',
     author: siteConfig.author
   },
   {
     name: 'TechGeeks',
-    description: 'Tecnología, control inteligente y seguridad',
+    description: 'Desarrollamos soluciones de seguridad tecnológica que impulsen el crecimiento, mejoren la eficiencia operativa y aumenten la rentabilidad de las empresas',
     url: 'https://techgeeks.mx',
     author: siteConfig.author
   }
