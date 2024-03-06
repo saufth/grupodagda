@@ -4,7 +4,7 @@ import Hero from '@/components/hero'
 import { history, culture } from '@/config/organization'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(String(process.env.NEXT_PUBLIC_SITE_URL)),
+  metadataBase: new URL(String(process.env.NEXT_PUBLIC_APP_URL)),
   title: 'Conocenos',
   description: culture.title
 }
