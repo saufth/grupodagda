@@ -8,19 +8,19 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-gradient-to-r from-primary to-primary/90 backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-primary-foreground hover:bg-primary',
+        default: 'bg-primary/90 backdrop-filter backdrop-blur-lg backdrop-saturate-150 text-primary-foreground hover:bg-primary',
         destructive: 'bg-destructive/95 text-destructive-foreground hover:bg-destructive',
         outline: 'border border-primary text-primary hover:bg-primary text-primary hover:text-primary-foreground',
         secondary: 'bg-gradient-to-r from-secondary to-secondary/95 text-secondary-foreground hover:bg-secondary',
-        ghost: 'bg-accent/10 hover:bg-accent/20 border backdrop-filter backdrop-blur-lg backdrop-saturate-150',
+        ghost: 'bg-secondary/50 hover:bg-secondary/60 border backdrop-filter backdrop-blur-lg backdrop-saturate-150',
         link: 'hover:underline'
       },
       size: {
         default: 'h-8 lg:h-9 px-4 text-sm lg:text-base',
         xs: 'text-xs lg:text-sm',
         sm: 'px-1 text-sm lg:text-base',
-        lg: 'w-fit h-11 lg:h-14 px-5 lg:px-6 lg:text-lg font-medium',
-        full: 'w-full lg:w-fit h-11 lg:h-14 px-5 lg:px-6 lg:text-lg font-medium',
+        lg: 'w-fit h-12 lg:h-16 px-6 lg:px-8 text-lg lg:text-xl font-medium',
+        full: 'w-full lg:w-fit h-12 lg:h-16 px-6 lg:px-8 text-lg lg:text-xl lg:font-medium',
         icon: 'h-7 lg:h-[33px] w-7 lg:w-[33px]'
       }
     },

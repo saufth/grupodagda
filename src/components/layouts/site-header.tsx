@@ -32,7 +32,7 @@ export default function SiteHeader () {
         )}
       >
         <div className='container'>
-          <div className='lg:cols-container flex-col md:flex-row gap-y-7 md:gap-y-0 mt-spacing-7 lg:mt-spacing-9 space-y-spacing-6 lg:space-y-0'>
+          <nav className='lg:cols-container flex-col md:flex-row gap-y-7 md:gap-y-0 mt-spacing-7 lg:mt-spacing-9 space-y-spacing-6 lg:space-y-0'>
             <div className='lg:w-1/3-cols'>
               <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
                 {siteConfig.name}
@@ -88,7 +88,7 @@ export default function SiteHeader () {
                 {contactEmail}
               </Link>
             </div>
-          </div>
+          </nav>
         </div>
       </header>
     </>
