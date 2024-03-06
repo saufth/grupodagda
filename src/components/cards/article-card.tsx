@@ -21,7 +21,7 @@ export function ArticleCard ({ className, headerClassName, contentClassName, ite
       {...props}
     >
       <CardHeader className={cn('lg:w-1/2-cols flex flex-col justify-center', headerClassName)}>
-        <h3 className='f-heading-2 font-header font-semibold text-balance text-center lg:text-left'>
+        <h3 className='f-heading-2 font-header font-bold text-balance text-center lg:text-left'>
           <span className='text-gradient'>
             {item.title}
           </span>
