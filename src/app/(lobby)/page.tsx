@@ -53,7 +53,7 @@ export default function IndexPage () {
                     target='_blank'
                     rel='noreferrer'
                     variant='default'
-                    size='lg'
+                    size='full'
                     aria-label={`Página principal de ${model.name}, se abre en una nueva pestaña`}
                     className='mt-spacing-5 flex items-center gap-spacing-2 mx-auto lg:mx-0'
                   >
