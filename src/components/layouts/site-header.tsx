@@ -44,6 +44,7 @@ export default function SiteHeader () {
                       href={item.url}
                       target='_blank'
                       rel='noreferrer'
+                      onClick={toggleMenu}
                       className='text-xl lg:text-2xl text-white'
                     >
                       {item.name}
@@ -61,6 +62,7 @@ export default function SiteHeader () {
                   <li key={key}>
                     <Link
                       href={item.href}
+                      onClick={toggleMenu}
                       className='text-xl lg:text-2xl text-white'
                     >
                       {item.title}
@@ -77,6 +79,7 @@ export default function SiteHeader () {
                 href={`mailto:${contactEmail}`}
                 target='_blank'
                 rel='noreferrer'
+                onClick={toggleMenu}
                 className='text-xl lg:text-2xl text-white mt-spacing-3'
               >
                 {contactEmail}
