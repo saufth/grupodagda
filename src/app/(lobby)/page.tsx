@@ -81,7 +81,7 @@ export default function IndexPage () {
             {businesModeles.map((model, key) => (
               <article key={key} className='lg:cols-container lg:even:flex-row-reverse lg:items-center py-spacing-9'>
                 <div className={cn('lg:w-1/2-cols flex justify-center', key % 2 !== 0 && 'lg:justify-end')}>
-                  <div className='w-32 sm:w-40 lg:w-11/12 aspect-square bg-primary/10 border rounded-full flex justify-center items-center'>
+                  <div className='w-28 sm:w-40 lg:w-11/12 aspect-square bg-primary/10 border rounded-full flex justify-center items-center'>
                     <model.Icon className='w-2/3 sm:w-2/3 xl:w-1/2 h-auto' />
                   </div>
                 </div>
