@@ -34,10 +34,10 @@ export default function SiteHeader () {
         <div className='container h-full flex items-center'>
           <div className='w-full lg:cols-container flex-col md:flex-row gap-y-7 md:gap-y-0 space-y-spacing-6 lg:space-y-0'>
             <div className='lg:w-1/3-cols'>
-              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+              <div className='text-lg lg:text-2xl font-medium text-muted-foreground'>
                 {siteConfig.name}
               </div>
-              <ul className='space-y-spacing-4 mt-spacing-4'>
+              <ul className='space-y-spacing-3 lg:space-y-spacing-4 mt-spacing3 lg:mt-spacing-4'>
                 {services.map((item, key) => (
                   <li key={key}>
                     <Link
@@ -46,7 +46,7 @@ export default function SiteHeader () {
                       rel='noreferrer'
                       aria-label={`Página principal de ${item.name}, se abre en una nueva pestaña`}
                       onClick={toggleMenu}
-                      className='text-2xl lg:text-3xl text-white font-medium'
+                      className='text-xl lg:text-3xl text-white font-medium'
                     >
                       {item.name}
                     </Link>
@@ -55,17 +55,17 @@ export default function SiteHeader () {
               </ul>
             </div>
             <nav className='lg:w-1/3-cols' aria-label='Directorio'>
-              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+              <div className='text-lg lg:text-2xl font-medium text-muted-foreground'>
                 Directorio
               </div>
-              <ul className='space-y-spacing-4 mt-spacing-4'>
+              <ul className='space-y-spacing-3 lg:space-y-spacing-4 mt-spacing3 lg:mt-spacing-4'>
                 {siteConfig.mainNav.map((item, key) => (
                   <li key={key}>
                     <Link
                       href={item.href}
                       onClick={toggleMenu}
                       aria-label={item.title}
-                      className='text-2xl lg:text-3xl text-white font-medium'
+                      className='text-xl lg:text-3xl text-white font-medium'
                     >
                       {item.title}
                     </Link>
@@ -74,7 +74,7 @@ export default function SiteHeader () {
               </ul>
             </nav>
             <div className='lg:w-1/3-cols'>
-              <div className='text-xl lg:text-2xl font-medium text-muted-foreground'>
+              <div className='text-lg lg:text-2xl font-medium text-muted-foreground'>
                 Correo electrónico
               </div>
               <Link
@@ -83,7 +83,7 @@ export default function SiteHeader () {
                 rel='noreferrer'
                 aria-label='Envia un mensaje con tu servicio de correo, se abre en una nueva pestaña'
                 onClick={toggleMenu}
-                className='text-2xl lg:text-3xl text-white font-medium mt-spacing-3'
+                className='text-xl lg:text-3xl text-white font-medium mt-spacing-3'
               >
                 {contactEmail}
               </Link>
