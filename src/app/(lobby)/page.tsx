@@ -58,7 +58,7 @@ export default function IndexPage () {
           </div>
         </div>
       </section>
-      <section className='mt-spacing-7'>
+      <section className='mt-spacing-9'>
         <div className='container'>
           <div className='grid place-content-center'>
             <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>

@@ -57,7 +57,7 @@ export default function AboutPage () {
           </div>
         </div>
       </section>
-      <section className='mt-spacing-7'>
+      <section className='mt-spacing-9'>
         <div className='container'>
           <div className='max-w-5xl mx-auto text-center'>
             <h2 className='f-display-3 font-semibold font-header'>
