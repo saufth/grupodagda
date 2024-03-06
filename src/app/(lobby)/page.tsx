@@ -33,7 +33,7 @@ export default function IndexPage () {
             {businesModeles.map((model, key) => (
               <article key={key} className='lg:cols-container lg:even:flex-row-reverse lg:items-center mt-spacing-9'>
                 <div className={cn('lg:w-1/3-cols flex justify-center', key % 2 !== 0 ? 'lg:justify-end' : 'lg:justify-start')}>
-                  <div className='w-32 lg:w-auto aspect-square bg-muted/30 border rounded-full flex justify-center items-center'>
+                  <div className='w-32 lg:w-auto aspect-square bg-muted/50 border rounded-full flex justify-center items-center'>
                     <model.Icon className='w-1/2 sm:w-1/2 xl:w-1/2 h-auto' />
                   </div>
                 </div>
