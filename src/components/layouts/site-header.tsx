@@ -27,8 +27,8 @@ export default function SiteHeader () {
       </button>
       <header
         className={cn(
-          'w-full h-0 bg-black/70 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
-          isMenuOpen && 'h-[100dvh]'
+          'w-0 h-[100dvh] bg-muted/90 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 right-0 z-30 overflow-hidden transition-[width] duration-500',
+          isMenuOpen && 'w-full'
         )}
       >
         <div className='container h-full flex items-center'>

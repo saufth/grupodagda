@@ -55,7 +55,7 @@ export default function Hero ({ title }: HeroProps) {
                     target='_blank'
                     rel='noreferrer'
                     aria-label={`Página principal de ${model.name}, se abre en una nueva pestaña`}
-                    className='group w-20 md:w-24 xl:w-28 h-20 md:h-24 xl:h-28 grid place-content-center border rounded-full bg-muted/60 hover:bg-muted backdrop-filter backdrop-saturate-200 transition-colors duration-300'
+                    className='group w-20 md:w-24 xl:w-28 h-20 md:h-24 xl:h-28 grid place-content-center border rounded-full bg-muted/90 hover:bg-muted backdrop-filter backdrop-saturate-200 transition-colors duration-300'
                   >
                     <model.Icon className='[&_*]:fill-foreground' />
                     <span className='sr-only'>{model.name}</span>
