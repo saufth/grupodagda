@@ -29,8 +29,12 @@ export default function IndexPage () {
         <div className='h-full relative z-10 flex flex-col justify-center'>
           <div className='container'>
             <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
-              <NextLink href='/'>
+              <NextLink
+                href='/'
+                aria-label={`Página principal de ${siteConfig.name}`}
+              >
                 <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300] [animation-delay:500ms]' />
+                <span className='sr-only'>{siteConfig.name}</span>
               </NextLink>
               <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6 opacity-0 animate-show [animation-delay:750ms]'>
                 <span className='text-gradient'>
@@ -46,6 +50,7 @@ export default function IndexPage () {
                       href={model.url}
                       target='_blank'
                       rel='noreferrer'
+                      aria-label={`Página principal de ${model.name}, se abre en una nueva pestaña`}
                       className='group w-20 md:w-24 xl:w-28 h-20 md:h-24 xl:h-28 grid place-content-center border rounded-full bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
                       <model.Icon className='[&_*]:fill-foreground' />
@@ -71,6 +76,7 @@ export default function IndexPage () {
               href='/nosotros'
               variant='ghost'
               size='lg'
+              aria-label={`Acerca de ${siteConfig.name}`}
               className='mt-spacing-5 mx-auto'
             >
               Acerca de nosotros
@@ -102,6 +108,7 @@ export default function IndexPage () {
                     rel='noreferrer'
                     variant='ghost'
                     size='lg'
+                    aria-label={`Página principal de ${model.name}, se abre en una nueva pestaña`}
                     className='mt-spacing-5 flex items-center gap-spacing-2 mx-auto lg:mx-0'
                   >
                     Visitar sitio

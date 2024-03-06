@@ -44,6 +44,7 @@ export default function SiteHeader () {
                       href={item.url}
                       target='_blank'
                       rel='noreferrer'
+                      aria-label={`Página principal de ${item.name}, se abre en una nueva pestaña`}
                       onClick={toggleMenu}
                       className='text-xl lg:text-2xl text-white'
                     >
@@ -63,6 +64,7 @@ export default function SiteHeader () {
                     <Link
                       href={item.href}
                       onClick={toggleMenu}
+                      aria-label={item.title}
                       className='text-xl lg:text-2xl text-white'
                     >
                       {item.title}
@@ -79,6 +81,7 @@ export default function SiteHeader () {
                 href={`mailto:${contactEmail}`}
                 target='_blank'
                 rel='noreferrer'
+                aria-label='Envia un mensaje con tu servicio de correo, se abre en una nueva pestaña'
                 onClick={toggleMenu}
                 className='text-xl lg:text-2xl text-white mt-spacing-3'
               >
