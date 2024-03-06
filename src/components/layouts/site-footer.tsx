@@ -10,7 +10,7 @@ export default function SiteFooter () {
           <div className='text-base sm:text-lg font-medium text-muted-foreground'>
             {siteConfig.name}
           </div>
-          <ul className='space-y-spacing-2 mt-spacing-3'>
+          <ul className='space-y-spacing-3 mt-spacing-3'>
             {services.map((item, key) => (
               <li key={key}>
                 <Link
@@ -18,7 +18,7 @@ export default function SiteFooter () {
                   target='_blank'
                   rel='noreferrer'
                   aria-label={`Página principal de ${item.name}, se abre en una nueva pestaña`}
-                  className='text-base xl:text-lg font-light text-white'
+                  className='text-lg xl:text-xl text-white'
                 >
                   {item.name}
                 </Link>
@@ -30,13 +30,13 @@ export default function SiteFooter () {
           <div className='text-base font-medium sm:text-lg text-muted-foreground' aria-label='Directorio'>
             Directorio
           </div>
-          <ul className='space-y-spacing-2 mt-spacing-3'>
+          <ul className='space-y-spacing-3 mt-spacing-3'>
             {siteConfig.mainNav.map((item, key) => (
               <li key={key}>
                 <Link
                   href={item.href}
                   aria-label={item.title}
-                  className='text-base xl:text-lg font-light text-white'
+                  className='text-lg xl:text-xl text-white'
                 >
                   {item.title}
                 </Link>
@@ -53,13 +53,13 @@ export default function SiteFooter () {
             target='_blank'
             rel='noreferrer'
             aria-label='Envia un mensaje con tu servicio de correo, se abre en una nueva pestaña'
-            className='text-base xl:text-lg font-light text-white'
+            className='text-lg xl:text-xl text-white'
           >
             {contactEmail}
           </Link>
         </div>
         <div>
-          <span className='text-white font-header text-sm'>
+          <span className='text-muted-foreground font-header'>
             {`${siteConfig.name} © ${new Date().getFullYear()}`}
           </span>
         </div>
