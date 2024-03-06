@@ -8,15 +8,16 @@ export default function IndexPage () {
   return (
     <>
       <Hero title={siteConfig.description} />
-      <section className='mt-spacing-7'>
+      <section>
         <div className='container'>
           <div className='grid place-content-center'>
-            <h2 className='f-heading-1 font-header font-semibold text-balance text-center'>
+            <h2 className='sr-only'>Nuestras soluciones</h2>
+            <p className='f-heading-1 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
                 fundamentales que toda empresa necesita para crecer y consolidarse con éxito
               </span>
-            </h2>
+            </p>
             <Link
               href='/nosotros'
               variant='ghost'
@@ -39,7 +40,7 @@ export default function IndexPage () {
                 <div className={cn('w-full lg:w-2/3-cols mt-spacing-5 lg:mt-0', key % 2 === 0 ? 'lg:pl-8 2xl:pl-20' : '2xl:pr-8')}>
                   <div className='text-center lg:text-left'>
                     <h3>
-                      <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
+                      <span className='f-display-3 font-header font-bold text-balance text-gradient'>
                         {model.name}
                       </span>
                     </h3>

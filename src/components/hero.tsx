@@ -29,7 +29,7 @@ interface HeroProps {
 
 export default function Hero ({ title }: HeroProps) {
   return (
-    <section className='pt-spacing-8 pb-spacing-9'>
+    <section className='pt-spacing-7 md:pt-spacing-6 pb-spacing-7'>
       <div className='h-full relative z-10 flex flex-col justify-center'>
         <div className='container'>
           <div className='max-w-[350px] sm:max-w-xl xl:max-w-4xl mx-auto text-center'>
@@ -40,7 +40,7 @@ export default function Hero ({ title }: HeroProps) {
               <Icons.Logotype className='w-auto h-16 mx-auto sm:h-20 xl:h-[88px] fill-accent stroke-accent [fill-opacity:0] animate-draw [stroke-dasharray:1300] [stroke-dashoffset:1300] [animation-delay:500ms]' />
               <span className='sr-only'>{siteConfig.name}</span>
             </NextLink>
-            <h1 className='f-display-1 font-header font-extrabold text-balance uppercase mt-spacing-6 opacity-0 animate-show [animation-delay:750ms]'>
+            <h1 className='f-display-1 font-header font-bold text-balance uppercase mt-spacing-6 opacity-0 animate-show [animation-delay:750ms]'>
               <span className='text-gradient'>
                 {title}
               </span>

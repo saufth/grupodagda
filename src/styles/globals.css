@@ -156,7 +156,7 @@
   /* Typography */
 
   .f-display-1 {
-    @apply text-[2.2rem] sm:text-6xl xl:text-7xl 2xl:text-8xl leading-[110%] lg:leading-[110%] xl:leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02em];
+    @apply text-[2.2rem] sm:text-6xl xl:text-[80px] leading-[110%] lg:leading-[110%] xl:leading-[110%] -tracking-[0.01em] xl:-tracking-[0.02em];
   }
 
   .f-display-2 {

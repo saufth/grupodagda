@@ -26,8 +26,8 @@ export default function SiteFooter () {
             ))}
           </ul>
         </div>
-        <div>
-          <div className='text-base font-medium sm:text-lg text-muted-foreground'>
+        <nav>
+          <div className='text-base font-medium sm:text-lg text-muted-foreground' aria-label='Directorio'>
             Directorio
           </div>
           <ul className='space-y-spacing-2 mt-spacing-3'>
@@ -43,7 +43,7 @@ export default function SiteFooter () {
               </li>
             ))}
           </ul>
-        </div>
+        </nav>
         <div>
           <div className='text-base sm:text-lg font-medium text-muted-foreground'>
             Correo electrónico

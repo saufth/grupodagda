@@ -14,25 +14,25 @@ export default function AboutPage () {
   return (
     <>
       <Hero title={culture.title} />
-      <section className='mt-spacing-7'>
+      <section>
         <div className='container'>
-          <div className='max-w-5xl mx-auto text-center'>
-            <h2 className='f-display-3 font-semibold font-header'>
-              <span className='text-gradient'>
-                Nuestra cultura
-              </span>
-            </h2>
+          <div className='text-center'>
+            <h2 className='sr-only'>Nuestra cultura</h2>
             {typeof culture.description === 'string'
               ? (
-                <p className='f-subhead-1 font-header font-semibold text-balancer'>
-                  {culture.description}
+                <p className='f-heading-2 font-header font-semibold text-balancer'>
+                  <span className='text-gradient'>
+                    {culture.description}
+                  </span>
                 </p>
                 )
               : (
                 <div className='mt-spacing-4 text-center space-y-spacing-3'>
                   {culture.description?.map((paragraph, key) => (
-                    <p key={key} className='f-subhead-1 font-header font-semibold text-balance'>
-                      {paragraph}
+                    <p key={key} className='f-heading-2 font-header font-semibold text-balance'>
+                      <span className='text-gradient'>
+                        {paragraph}
+                      </span>
                     </p>
                   ))}
                 </div>
