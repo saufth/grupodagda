@@ -34,8 +34,6 @@ export default function SiteFooter () {
               <li key={key}>
                 <Link
                   href={item.href}
-                  target='_blank'
-                  rel='noreferrer'
                   className='text-base xl:text-lg font-light text-white'
                 >
                   {item.title}

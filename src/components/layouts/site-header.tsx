@@ -61,8 +61,6 @@ export default function SiteHeader () {
                   <li key={key}>
                     <Link
                       href={item.href}
-                      target='_blank'
-                      rel='noreferrer'
                       className='text-xl lg:text-2xl text-white'
                     >
                       {item.title}
