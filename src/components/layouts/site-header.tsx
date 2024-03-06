@@ -13,7 +13,7 @@ export default function SiteHeader () {
   return (
     <>
       <button
-        className='w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 fixed right-gutter top-gutter z-40 transition-colors duration-300 bg-primary/10 backdrop-filter backdrop-blur-md grid place-content-center border rounded-full opacity-0 animate-show [animation-delay:2s]'
+        className='w-12 sm:w-14 lg:w-16 h-12 sm:h-14 lg:h-16 fixed right-gutter top-gutter z-40 transition-colors duration-300 bg-primary/10 backdrop-filter backdrop-blur-md grid place-content-center border rounded-full opacity-0 animate-show [animation-delay:1s]'
         onClick={toggleMenu}
       >
         <div className='flex'>
@@ -27,7 +27,7 @@ export default function SiteHeader () {
       </button>
       <header
         className={cn(
-          'w-full h-0 bg-gradient-to-tl from-black/80 via-black/60 to-primary/60 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
+          'w-full h-0 bg-black/60 backdrop-filter backdrop-blur-md fixed flex flex-col justify-between top-0 left-0 z-30 overflow-hidden transition-[height] duration-500',
           isMenuOpen && 'h-[100dvh]'
         )}
       >
