@@ -57,7 +57,7 @@ export default function AboutPage () {
           </div>
         </div>
       </section>
-      <section className='mt-spacing-9'>
+      <section className='py-spacing-8'>
         <div className='container'>
           <div className='max-w-5xl mx-auto text-center'>
             <h2 className='f-display-3 font-semibold font-header'>
@@ -94,7 +94,7 @@ export default function AboutPage () {
         </div>
       </section>
       <section>
-        <div className='container grid place-content-center mt-spacing-9'>
+        <div className='container grid place-content-center mt-spacing-7'>
           <h2>
             <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
               {history.title}
