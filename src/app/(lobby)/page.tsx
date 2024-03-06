@@ -46,7 +46,7 @@ export default function IndexPage () {
                       href={model.url}
                       target='_blank'
                       rel='noreferrer'
-                      className='group w-[70px] md:w-20 xl:w-24 h-[70px] md:h-20 xl:h-24 grid place-content-center border rounded-sm bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
+                      className='group w-[70px] md:w-20 xl:w-24 h-[70px] md:h-20 xl:h-24 grid place-content-center border rounded-xs bg-accent/10 hover:bg-accent/20 transition-colors duration-300'
                     >
                       <model.Icon className='[&_*]:fill-foreground' />
                       <span className='sr-only'>{model.name}</span>
