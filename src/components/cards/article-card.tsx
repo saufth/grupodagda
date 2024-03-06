@@ -20,7 +20,16 @@ export function ArticleCard ({ className, headerClassName, contentClassName, ite
       className={cn('lg:cols-container bg-transparent border-0 shadow-none p-0', className)}
       {...props}
     >
-      <CardHeader className={cn('lg:w-1/2-cols flex flex-col justify-center', headerClassName)}>
+      <CardContent className={cn('lg:w-1/2-cols lg:flex lg:items-center', contentClassName)}>
+        {item.image && (
+          <NextImage
+            className='w-full h-auto aspect-video rounded-sm'
+            loading='lazy'
+            {...item.image}
+          />
+        )}
+      </CardContent>
+      <CardHeader className={cn('lg:w-1/2-cols mt-spacing-5 lg:mt-0 flex flex-col justify-center', headerClassName)}>
         <h3 className='f-heading-2 font-header font-bold text-balance text-center lg:text-left'>
           <span className='text-gradient'>
             {item.title}
@@ -40,15 +49,6 @@ export function ArticleCard ({ className, headerClassName, contentClassName, ite
             ))}
         </div>
       </CardHeader>
-      <CardContent className={cn('lg:w-1/2-cols mt-spacing-5 lg:mt-0 lg:flex lg:items-center', contentClassName)}>
-        {item.image && (
-          <NextImage
-            className='w-full h-auto aspect-video rounded-sm'
-            loading='lazy'
-            {...item.image}
-          />
-        )}
-      </CardContent>
     </Card>
   )
 }

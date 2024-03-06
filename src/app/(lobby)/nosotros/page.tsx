@@ -43,7 +43,7 @@ export default function AboutPage () {
               <ArticleCard
                 key={key}
                 item={item}
-                className='mt-spacing-7 lg:mt-spacing-9 lg:even:flex-row-reverse'
+                className='mt-spacing-7 lg:mt-spacing-9 lg:odd:flex-row-reverse'
                 headerClassName={key % 2 === 0 ? '2xl:pr-8' : '2xl:pl-8'}
               />
             ))}
