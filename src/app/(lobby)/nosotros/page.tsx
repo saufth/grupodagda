@@ -20,7 +20,7 @@ export default function AboutPage () {
             <h2 className='sr-only'>Nuestra cultura</h2>
             {typeof culture.description === 'string'
               ? (
-                <p className='f-heading-2 font-header font-semibold text-balancer'>
+                <p className='f-heading-2 font-header font-bold text-balancer'>
                   <span className='text-gradient'>
                     {culture.description}
                   </span>
@@ -29,7 +29,7 @@ export default function AboutPage () {
               : (
                 <div className='mt-spacing-4 text-center space-y-spacing-3'>
                   {culture.description?.map((paragraph, key) => (
-                    <p key={key} className='f-heading-2 font-header font-semibold text-balance'>
+                    <p key={key} className='f-heading-2 font-header font-bold text-balance'>
                       <span className='text-gradient'>
                         {paragraph}
                       </span>
@@ -53,7 +53,7 @@ export default function AboutPage () {
       <section>
         <div className='container grid place-content-center mt-spacing-7'>
           <h2>
-            <span className='f-heading-1 font-header font-semibold text-balance text-gradient'>
+            <span className='f-heading-1 font-header font-bold text-balance text-gradient'>
               {history.title}
             </span>
           </h2>
