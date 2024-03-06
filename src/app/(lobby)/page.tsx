@@ -15,7 +15,7 @@ export default function IndexPage () {
             <p className='f-heading-2 font-header font-bold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
-                fundamentales que toda empresa necesita para crecer y consolidarse con éxito
+                fundamentales que toda empresa necesita para crecer y consolidarse con éxito.
               </span>
             </p>
             <Link
@@ -45,7 +45,7 @@ export default function IndexPage () {
                       </span>
                     </h3>
                     <p className='mt-spacing-4 f-heading-2 text-balance'>
-                      {model.description}
+                      {model.description}.
                     </p>
                   </div>
                   <Link
