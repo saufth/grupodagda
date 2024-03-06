@@ -13,7 +13,7 @@ export default function SiteHeader () {
   return (
     <>
       <button
-        className='w-10 lg:w-14 h-10 lg:h-14 fixed right-gutter top-gutter z-40 transition-colors duration-300 bg-primary/10 backdrop-filter backdrop-blur-md grid place-content-center border rounded-full opacity-0 animate-show [animation-delay:1s]'
+        className='w-10 lg:w-14 h-10 lg:h-14 fixed right-gutter top-gutter z-40 transition-colors duration-300 bg-secondary/5 backdrop-filter backdrop-blur-md grid place-content-center border rounded-full opacity-0 animate-show [animation-delay:1s]'
         onClick={toggleMenu}
       >
         <div className='flex'>

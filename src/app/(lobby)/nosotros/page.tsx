@@ -16,7 +16,7 @@ export default function AboutPage () {
       <Hero title={culture.title} />
       <section>
         <div className='container'>
-          <div className='text-center'>
+          <div className='text-center opacity-0 animate-show [animation-delay:1s]'>
             <h2 className='sr-only'>Nuestra cultura</h2>
             {typeof culture.description === 'string'
               ? (

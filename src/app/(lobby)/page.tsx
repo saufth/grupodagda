@@ -10,7 +10,7 @@ export default function IndexPage () {
       <Hero title={siteConfig.description} />
       <section>
         <div className='container'>
-          <div className='grid place-content-center'>
+          <div className='grid place-content-center opacity-0 animate-show [animation-delay:1s]'>
             <h2 className='sr-only'>Nuestras soluciones</h2>
             <p className='f-heading-1 font-header font-semibold text-balance text-center'>
               <span className='text-gradient'>
