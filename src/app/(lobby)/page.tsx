@@ -12,7 +12,7 @@ export default function IndexPage () {
         <div className='container'>
           <div className='grid place-content-center opacity-0 animate-show [animation-delay:1s]'>
             <h2 className='sr-only'>Nuestras soluciones</h2>
-            <p className='f-heading-1 font-header font-semibold text-balance text-center'>
+            <p className='f-heading-2 font-header font-bold text-balance text-center'>
               <span className='text-gradient'>
                 Somos un corporativo que trabaja constantemente en innovar y perfeccionar los pilares
                 fundamentales que toda empresa necesita para crecer y consolidarse con éxito

@@ -20,7 +20,7 @@ export default function AboutPage () {
             <h2 className='sr-only'>Nuestra cultura</h2>
             {typeof culture.description === 'string'
               ? (
-                <p className='f-heading-2 font-header font-semibold text-balancer'>
+                <p className='f-heading-2 font-header font-bold text-balancer'>
                   <span className='text-gradient'>
                     {culture.description}
                   </span>
