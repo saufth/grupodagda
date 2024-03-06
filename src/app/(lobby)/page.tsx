@@ -77,15 +77,15 @@ export default function IndexPage () {
               <ArrowTopRightIcon className='w-auto h-4 lg:h-5 ml-2' />
             </Link>
           </div>
-          <div>
+          <div className='pb-spacing-7'>
             {businesModeles.map((model, key) => (
               <article key={key} className='lg:cols-container lg:even:flex-row-reverse lg:items-center mt-spacing-9'>
-                <div className={cn('lg:w-1/2-cols flex justify-center', key % 2 !== 0 && 'lg:justify-end')}>
-                  <div className='w-28 sm:w-40 lg:w-11/12 aspect-square bg-primary/10 border rounded-full flex justify-center items-center'>
-                    <model.Icon className='w-2/3 sm:w-2/3 xl:w-1/2 h-auto' />
+                <div className={cn('lg:w-1/3-cols flex justify-center', key % 2 !== 0 ? 'lg:justify-end' : 'lg:justify-start')}>
+                  <div className='w-32 lg:w-auto aspect-square bg-primary/10 border rounded-full flex justify-center items-center'>
+                    <model.Icon className='w-1/2 sm:w-1/2 xl:w-1/2 h-auto' />
                   </div>
                 </div>
-                <div className={cn('w-full lg:w-1/2-cols mt-spacing-5 lg:mt-0', key % 2 === 0 ? '2xl:pl-8' : '2xl:pr-8')}>
+                <div className={cn('w-full lg:w-2/3-cols mt-spacing-5 lg:mt-0', key % 2 === 0 ? '2xl:pl-8' : '2xl:pr-8')}>
                   <div className='text-center lg:text-left'>
                     <h3>
                       <span className='f-display-3 font-header font-semibold text-balance text-gradient'>
