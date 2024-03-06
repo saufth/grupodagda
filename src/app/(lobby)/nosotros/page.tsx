@@ -2,10 +2,9 @@ import { type Metadata } from 'next'
 import { ArticleCard } from '@/components/cards/article-card'
 import Hero from '@/components/hero'
 import { history, culture } from '@/config/organization'
-import { siteConfig } from '@/config/site'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteConfig.url),
+  metadataBase: new URL(String(process.env.NEXT_PUBLIC_SITE_URL)),
   title: 'Conocenos',
   description: culture.title
 }
