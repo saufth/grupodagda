@@ -1,5 +1,5 @@
-import { Article, Section, type SiteConfig } from '@/types'
-import { siteConfig } from './site'
+import { siteConfig } from '@/config/site'
+import { type Article, type Section, type SiteConfig } from '@/types'
 
 export const slogan = siteConfig.description
 
