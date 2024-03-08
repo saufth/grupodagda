@@ -3,42 +3,36 @@ import { siteConfig } from './site'
 
 export const slogan = siteConfig.description
 
-export const services: Omit<SiteConfig, 'mainNav'>[] = [
+export const services: Omit<SiteConfig, 'mainNav' | 'author'>[] = [
   {
     name: 'Rehsok',
     description: 'Creamos posibilidades para empresas orientadas a desarrollar un legado de progreso generacional',
-    url: 'https://rehsok.com',
-    author: siteConfig.author
+    url: 'https://rehsok.com'
   },
   {
     name: 'Emah',
     description: 'Impulsamos empresas a desarrollar propuestas de alto valor agregado para sus clientes a fin de crear una diferenciación real en el mercado',
-    url: 'https://emah.mx',
-    author: siteConfig.author
+    url: 'https://emah.mx'
   },
   {
     name: 'Keyperspot',
     description: 'Potenciamos el factor humano a través de soluciones tecnológicas, con el principal objetivo de transformarlo en un verdadero activo empresarial',
-    url: 'https://keyperspot.com',
-    author: siteConfig.author
+    url: 'https://keyperspot.com'
   },
   {
     name: 'Taxo Contable',
     description: 'Ordenamos la información de las empresas, generando valor en las áreas contables, fiscales y estrategias de modelos de negocios',
-    url: 'https://taxocontable.com',
-    author: siteConfig.author
+    url: 'https://taxocontable.com'
   },
   {
     name: 'Sercius',
     description: 'Ayudamos a las empresas a cumplir con las leyes y regulaciones, mitigar riesgos y resolver asuntos legales que puedan surgir en el curso de sus operaciones comerciales',
-    url: 'https://sercius.mx',
-    author: siteConfig.author
+    url: 'https://sercius.mx'
   },
   {
     name: 'TechGeeks',
     description: 'Desarrollamos soluciones de seguridad tecnológica que impulsen el crecimiento, mejoren la eficiencia operativa y aumenten la rentabilidad de las empresas',
-    url: 'https://techgeeks.mx',
-    author: siteConfig.author
+    url: 'https://techgeeks.mx'
   }
 ]
 

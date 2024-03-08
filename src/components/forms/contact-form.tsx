@@ -26,7 +26,7 @@ import ReCAPTCHA from 'react-google-recaptcha'
 import { useForm } from 'react-hook-form'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { type Inputs, contactEmailSchema } from '@/lib/validations/email'
-import { services } from '@/config/services'
+import { services } from '@/config/organization'
 
 const recaptchaSiteKey = String(process.env.NEXT_PUBLIC_RECAPTCHA_SITE || 'recapthca-site-key-not-found')
 
@@ -38,7 +38,7 @@ export default function ContactForm () {
     defaultValues: {
       name: '',
       email: '',
-      category: services[0]?.title || 'category-no-found',
+      category: services[0]?.name || 'category-no-found',
       subject: ''
     }
   })
@@ -142,12 +142,12 @@ export default function ContactForm () {
                     {services.map(
                       (service) => (
                         <SelectItem
-                          key={service.title}
-                          value={service.title}
+                          key={service.name}
+                          value={service.name}
                           placeholder='Selecciona una categoría'
                           className='hover:cursor-pointer group-hover:bg-secondary'
                         >
-                          {service.title}
+                          {service.name}
                         </SelectItem>
                       )
                     )}

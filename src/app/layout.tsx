@@ -6,9 +6,8 @@ import { Toaster } from '@/components/ui/toaster'
 import GoogleSearchScript from '@/components/layouts/google-seacrch-script'
 import { cn } from '@/lib/utils'
 import { fontSans, fontHeader } from '@/lib/fonts'
-import { services } from '@/config/services'
 import { siteConfig } from '@/config/site'
-import { slogan } from '@/config/organization'
+import { slogan, services } from '@/config/organization'
 import '@/styles/globals.css'
 
 export const metadata: Metadata = {
@@ -20,7 +19,7 @@ export const metadata: Metadata = {
   description: siteConfig.description,
   keywords: [
     siteConfig.name,
-    ...services.map(({ title }) => title)
+    ...services.map(({ name }) => name)
   ],
   authors: siteConfig.author,
   creator: siteConfig.author.name,
